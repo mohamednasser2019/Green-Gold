@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\configration;
-use App\Features;
-use App\Member;
-use App\Gallery;
+// use App\configration;
+// use App\Features;
+use App\Product;
+// use App\Gallery;
 use App\Category;
 
 //builder
@@ -24,29 +24,29 @@ class HomeController extends Controller
 
     public function index()
     {
-       $settings = configration::find(1);
+    //    $settings = configration::find(1);
 
-       $Members = Member::all();
-       $Gallery = Gallery::all();
+       $Product = Product::all();
+    //    $Gallery = Gallery::all();
 
        $Category = Category::all();
 
-       $Features = Features::where('type','feature')
-       ->orderBy('id','desc')
-       ->limit(4)->get();
+    //    $Features = Features::where('type','feature')
+    //    ->orderBy('id','desc')
+    //    ->limit(4)->get();
 
-        $services = Features::where('type','service')
-                    ->orderBy('id','desc')
-                    ->limit(6)->get();
+        // $services = Features::where('type','service')
+        //             ->orderBy('id','desc')
+        //             ->limit(6)->get();
 
-     $data['settings']= $settings;
-     $data['Members']= $Members;
-     $data['Features']= $Features;
-     $data['services']= $services;
+    //  $data['settings']= $settings;
+     $data['Product']= $Product;
+    //  $data['Features']= $Features;
+    //  $data['services']= $services;
      $data['Category']= $Category;
-     $data['Gallery']= $Gallery;
+    //  $data['Gallery']= $Gallery;
      
-
+// dd($data);
 
         return view('Medico', compact('data'));
     }

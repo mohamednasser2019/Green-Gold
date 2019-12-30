@@ -59,7 +59,7 @@
             <tr>
               <td>{{ $row->id }}</td>
               <td><img width="100px" height="80px" src="{{ asset('public/uploads/Products_images/'.$row->product_img) }}"></td>
-              <td>{{ $row->getCategory->name }}</td>
+              <td>{{ $row->getCategory->category_name }}</td>
               <td>{{ $row->product_name }}</td>
               <td>{{ $row->benefits_of_use }}</td>
               <td>{{ $row->usage_rates }}</td>

@@ -46,7 +46,7 @@
                    @foreach($data as $row)
                     <tr>
                       <td>{{ $row->id }}</td>
-                      <td>{{ $row->name }}</td>
+                      <td>{{ $row->category_name }}</td>
                       <td>{{ $row->created_at->format('Y-d-m') }}</td>
                       <td>{{ $row->updated_at->format('Y-d-m') }}</td>
                       <td>

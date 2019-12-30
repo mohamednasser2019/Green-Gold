@@ -28,8 +28,8 @@
               {!! Form::model($data, ['route' => ['categories.update',$data->id] , 'method'=>'PUT']) !!}
               
               <div class="form-group">
-                    {!! Form::label('name', 'Category Name') !!}
-                    {!! Form::text('name',$data->name,['class'=>'form-control', 'placeholder'=>'Enter The Name']) !!}
+                    {!! Form::label('category_name', 'Category Name') !!}
+                    {!! Form::text('category_name',$data->name,['class'=>'form-control', 'placeholder'=>'Enter The Name']) !!}
               </div>
               <br>
               <div class="form-group">

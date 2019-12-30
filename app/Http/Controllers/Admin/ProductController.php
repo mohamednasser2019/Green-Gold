@@ -45,7 +45,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-    	$categories = Category::pluck('name','id');
+    	$categories = Category::pluck('category_name','id');
     	
         return view($this->folderView.'create',compact('categories'));
     }
@@ -120,7 +120,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $data = $this->objectName::find($id);
-        $categories = Category::pluck('name','id');
+        $categories = Category::pluck('category_name','id');
         
         return view($this->folderView.'edit', compact('data','categories'));
     }
@@ -134,17 +134,19 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'name' => 'required|string',
-            'category_id' => 'required|string',
-            // 'avatar' => 'required|string',
+       $request->validate([
+            'category_id' => 'required',
+            'product_name' => 'required|string',
+            'benefits_of_use' => 'required|string',
+            'usage_rates' => 'required|string',
+            'aboutProduct' => 'required|string',
         ]);
 
         $input = $request->all();
-      if($request['avatar'] != null)
+      if($request['product_img'] != null)
         {
             // This is Image Information ...
-            $file    = $request->file('avatar');
+            $file    = $request->file('product_img');
             $name    = $file->getClientOriginalName();
             $ext     = $file->getClientOriginalExtension();
             $size    = $file->getSize();
@@ -153,14 +155,14 @@ class ProductController extends Controller
             
             // Move Image To Folder ..
             $fileNewName = 'img_'.time().'.'.$ext;
-            $file->move(public_path('uploads/avatars'), $fileNewName);
+            $file->move(public_path('uploads/Products_Images'), $fileNewName);
             
             $input = $request->all();
-            $input['avatar'] = $fileNewName;
+            $input['product_img'] = $fileNewName;
 
         }else
         {
-            unset($input['avatar']);
+            unset($input['product_img']);
         }
            
 

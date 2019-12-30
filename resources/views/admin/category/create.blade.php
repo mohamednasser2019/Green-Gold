@@ -27,8 +27,8 @@
               {!! Form::open(['url' => 'admin/categories']) !!}
 
               <div class="form-group">
-                    {!! Form::label('name', 'Category Name') !!}
-                    {!! Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Enter The Name']) !!}
+                    {!! Form::label('category_name', 'Category Name') !!}
+                    {!! Form::text('category_name',null,['class'=>'form-control', 'placeholder'=>'Enter The Name']) !!}
               </div>
 
               <br>

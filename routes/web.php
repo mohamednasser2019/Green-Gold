@@ -7,6 +7,11 @@
 Route::get('/','HomeController@index');
 // Route::get('read_more/{id}/{text}','HomeController@readMore');
 
+Route::get('product/{id}','ProductWebsiteController@show');
+
+
+
+
 Route::group(['prefix' => 'admin'], function ()
 {
     Auth::routes();
@@ -28,6 +33,10 @@ Route::group(['prefix' => 'admin'], function ()
     Route::resource('products', 'Admin\ProductController');
     Route::get('products/{id}/delete', 'Admin\ProductController@destroy');
     Route::get('products/{id}/edit', 'Admin\ProductController@edit');
+
+       
+
+    
 
 
 

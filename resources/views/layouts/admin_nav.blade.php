@@ -52,7 +52,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ URL::to('admin/home') }}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>CPanel</span>
         </a>
@@ -61,12 +61,7 @@
 
 
             
-      <li class="nav-item">
-        <!-- {{ route('configrations') }} -->
-        <a class="nav-link" href="">
-          <i class="fas fa-fw fa-user"></i>
-          <span>Configuration</span></a>
-      </li>
+     
       <li class="nav-item">
         <a class="nav-link" href="{{ URL::to('admin/categories') }}">
           <i class="fas fa-fw fa-chart-area"></i>

@@ -23,7 +23,7 @@
                 </div>
                 <div class="mr-5">{{ count($data['user']) }} Users!</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
+              <a class="card-footer text-white clearfix small z-1" href="{{ URL::to('admin/users') }}">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="mr-5">{{ count($data['product']) }} Products!</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
+              <a class="card-footer text-white clearfix small z-1" href="{{ URL::to('admin/products') }}">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="mr-5">{{ count($data['category']) }} Categories!</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
+              <a class="card-footer text-white clearfix small z-1" href="{{ URL::to('admin/categories') }}">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
