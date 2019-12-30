@@ -6,11 +6,6 @@
       <i class="fas fa-bars"></i>
     </button>  
 
-    <ul class="navbar-nav ml-auto ml-md-0">
-        <li class="nav-item dropdown no-arrow mx-1">
-  <a href="{{ URL::to('/') }}" class="nav-link dropdown-toggle" >main Page</a>
-</li>
-    </ul>
   <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
         
       </form>
@@ -31,9 +26,6 @@
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#">Settings</a>
-          <a class="dropdown-item" href="#">Activity Log</a>
-          <div class="dropdown-divider"></div>
 
         <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -62,8 +54,8 @@
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="{{ URL::to('admin/home') }}">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>CPanel</span>
+          <i class="fas fa-fw fa-tachometer-alt" style="font-size: 16px;"></i>
+          <span style="font-size: 18px;">الصفحة الرئيسية</span>
         </a>
       </li>
       
@@ -73,18 +65,18 @@
      
       <li class="nav-item">
         <a class="nav-link" href="{{ URL::to('admin/categories') }}">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Categories</span></a>
+          <i class="fas fa-fw fa-chart-area" style="font-size: 16px;"></i>
+           <span style="font-size: 18px;">التصنيفات</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ URL::to('admin/products') }}">
-          <i class="    fas fa-fw fa-user"></i>
-          <span>Products</span></a>
+          <i class="    fas fa-fw fa-user" style="font-size: 16px;"></i>
+          <span style="font-size: 18px;">المنتجات</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="{{ URL::to('admin/users') }}">
-          <i class="fas fa-fw fa-user"></i>
-          <span>Users / Registration</span></a>
+          <i class="fas fa-fw fa-user" style="font-size: 16px;"></i>
+          <span style="font-size: 18px;">المستخدمين</span></a>
       </li>
     </ul>

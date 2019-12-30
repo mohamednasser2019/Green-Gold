@@ -3,7 +3,7 @@
 @section('navbar')
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="{{ URL::to('admin/home') }}">Dashboard</a>
+    <a href="{{ URL::to('admin/home') }}">لالصفحة الرئيسية</a>
   </li>
   <li class="breadcrumb-item active">Users</li>
 </ol>
@@ -79,11 +79,12 @@
                           <td>{{ $row->name }}</td>
                           <td class="hidden-xs">{{ $row->email}}</td>
                           <td class="hidden-xs">{{ $row->created_at->format('Y-d-m') }}</td>
+
                           <td class="center">
                           <div class="visible-md visible-lg hidden-sm hidden-xs">
-                            <a href="{{ URL::to('admin/users/'.$row->id.'/edit') }}" class="btn btn-xs btn-blue tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-edit"></i></a>
+                            <a href="{{ URL::to('admin/users/'.$row->id.'/edit') }}" class="btn btn-xs btn-blue tooltips" data-placement="top" data-original-title="تعديل"><i class="fa fa-edit"></i></a>
 
-                        <a class="btn btn btn-xs btn-red tooltips" data-href="{{ URL::to('admin/users/'.$row->id.'/delete') }}" data-toggle="modal" data-target="#confirm-delete" style="color: #FFF" data-original-title="Delete"><i class="fa fa-times fa fa-white">  </i> </a>
+                        <a class="btn btn btn-xs btn-red tooltips" data-href="{{ URL::to('admin/users/'.$row->id.'/delete') }}" data-toggle="modal" data-target="#confirm-delete" style="color: #FFF" data-original-title="حذف"><i class="fa fa-times fa fa-white">  </i> </a>
 
                           </div>
                           <div class="visible-xs visible-sm hidden-md hidden-lg">

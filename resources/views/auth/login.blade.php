@@ -8,7 +8,7 @@
     <div class="row">
         <div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
             <div class="logo">
-                <img src="{{ asset('public/img/logo-sm.png') }}">
+             <!--    <img src="{{ asset('public/img/logo-sm.png') }}" width="50" height="50"> -->
             </div>
             <!-- start: LOGIN BOX -->
 
@@ -42,9 +42,7 @@
                             <span class="input-icon">
                                 <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
                                 <i class="fa fa-lock"></i>
-                                <a class="forgot" href="#">
-                                    I forgot my password
-                                </a>
+                               
                             </span>
                             <div>
               @if ($errors->has('password'))
@@ -55,10 +53,7 @@
             </div>
                         </div>
                         <div class="form-actions">
-                            <label for="remember" class="checkbox-inline">
-                                <input type="checkbox" class="grey remember" id="remember" name="remember">
-                                Keep me signed in
-                            </label>
+                         
                             <button type="submit" class="btn btn-green pull-right" value="Login">
                                 Login <i class="fa fa-arrow-circle-right"></i>
                             </button>                  

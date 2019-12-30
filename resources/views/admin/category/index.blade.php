@@ -3,7 +3,7 @@
 @section('navbar')
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="{{ URL::to('admin/home') }}">Dashboard</a>
+    <a href="{{ URL::to('admin/home') }}">لصفحة الرئيسية </a>
   </li>
   <li class="breadcrumb-item active">Categories</li>
 </ol>
@@ -45,10 +45,37 @@
                       <td>{{ $row->category_name }}</td>
                       <td>{{ $row->created_at->format('Y-d-m') }}</td>
                       <td>{{ $row->updated_at->format('Y-d-m') }}</td>
-                      <td>
-                        <a href="{{ URL::to('admin/categories/'.$row->id.'/edit') }}" class="btn btn-info btn-sm">Edit</a>
-                        <a class="btn btn-danger btn-sm" data-href="{{ URL::to('admin/categories/'.$row->id.'/delete') }}" data-toggle="modal" data-target="#confirm-delete" style="color: #FFF">Delete</a>
-                      </td>
+                
+
+
+                       <td class="center">
+                          <div class="visible-md visible-lg hidden-sm hidden-xs">
+                            <a href="{{ URL::to('admin/categories/'.$row->id.'/edit') }}" class="btn btn-xs btn-blue tooltips" data-placement="top" data-original-title="تعديل"><i class="fa fa-edit"></i></a>
+
+                        <a class="btn btn btn-xs btn-red tooltips" data-href="{{ URL::to('admin/categories/'.$row->id.'/delete') }}" data-toggle="modal" data-target="#confirm-delete" style="color: #FFF" data-original-title="حذف"><i class="fa fa-times fa fa-white">  </i> </a>
+
+                          </div>
+                          <div class="visible-xs visible-sm hidden-md hidden-lg">
+                            <div class="btn-group">
+                              <a class="btn btn-green dropdown-toggle btn-sm" data-toggle="dropdown" href="#">
+                                <i class="fa fa-cog"></i> <span class="caret"></span>
+                              </a>
+                              <ul role="menu" class="dropdown-menu pull-right dropdown-dark">
+                                <li>
+                                  <a role="menuitem" tabindex="-1" href="{{ URL::to('admin/categories/'.$row->id.'/edit') }}">
+                                    <i class="fa fa-edit">
+
+                                    </i> Edit
+                                  </a>
+                                </li>
+                                <li>
+                                  <a role="menuitem" tabindex="-1" data-href="{{ URL::to('admin/categories/'.$row->id.'/delete') }}" data-toggle="modal" data-target="#confirm-delete">
+                                    <i class="fa fa-times"></i> Remove
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div></td>
                     </tr>
                    @endforeach
 
@@ -56,7 +83,7 @@
               </table>
             </div>
           </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+
         </div>
 
 @endsection

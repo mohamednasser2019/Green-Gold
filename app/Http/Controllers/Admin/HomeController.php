@@ -11,10 +11,12 @@ use DB;
 class HomeController extends Controller
 {
    
-
+    public $objectName;
 	public function __construct()
 	{
 		 $this->middleware('auth');
+
+
 	}
 
 
@@ -30,9 +32,9 @@ class HomeController extends Controller
         $data['user'] = $user;
         $data['product'] = $product;
 
-
 		return view('admin.index',compact('data'));
 	}
+
 
 
 

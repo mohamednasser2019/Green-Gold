@@ -3,7 +3,7 @@
 @section('navbar')
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="{{ URL::to('admin/home') }}">Dashboard</a>
+    <a href="{{ URL::to('admin/home') }}">لالصفحة الرئيسية</a>
   </li>
   <li class="breadcrumb-item">
     <a href="{{ URL::to('admin/users') }}">Users</a>

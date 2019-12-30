@@ -57,7 +57,7 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string',
+            'category_name' => 'required|string',
         ]);
 
         $input = $request->all();
