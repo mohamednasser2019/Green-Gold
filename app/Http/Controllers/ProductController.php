@@ -32,6 +32,8 @@ class ProductController extends Controller
     {
         $data = $this->objectName::with('getCategory')->find($id);
 
+        
+
         return view($this->folderView, compact('data'));
     }
 

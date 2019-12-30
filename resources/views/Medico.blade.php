@@ -36,10 +36,12 @@
   </div>
   <!-- /.container -->
 </nav>
-
+<br>
 <!-- Section: intro -->
 <section id="intro" class="intro">
-  <div class="intro-content">
+  <div class="">
+    <br><br><br>
+    <img src="{{asset('public/img/dummy/bg1.jpg')}}"  width="100%" height="450px" />
  
   </div>
 </section>
@@ -148,7 +150,7 @@
       <div class="col-lg-8 col-lg-offset-2">
         <div class="wow fadeInDown" data-wow-delay="0.1s">
           <div class="section-heading text-center">
-            <h2 class="h-bold" style="color:green;">Our values</h2>
+            <h2 class="h-bold" style="color:green;">قيمنا</h2>
           </div>
         </div>
         <div class="divider-short"></div>
@@ -222,18 +224,18 @@
         <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">كل المنتجات ({{ count($data['Product'])+1 }})
               </div>
   @foreach($data['Category'] as $cat)
-          <div data-filter=".{{$cat->category_name}}" class="cbp-filter-item">{{$cat->category_name}}
+          <div data-filter=".{{$cat->id}}" class="cbp-filter-item">{{$cat->category_name}}
                 ( <div class="cbp-filter-counter"></div>)
           </div>
-           
+          
 @endforeach
-
+<br><br>
 
         <div id="grid-container" class="cbp-l-grid-team">
           <ul>
           @foreach($data['Product'] as $product)
 
-            <li class="cbp-item {{$product->getCategory->category_name}} ">
+            <li class="cbp-item {{$product->getCategory->id}} ">
               <a href="{{ URL::to('product/'.$product->id)}}" class="cbp-caption cbp-singlePage">
                 <div class="cbp-caption-defaultWrap">
                   <img src="{{asset('public/uploads/Products_Images/'.$product->product_img)}}" alt="" width="100%">
@@ -349,7 +351,7 @@
     
 <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
 
-  <div class="carousel-reviews broun-block">
+  <div class="carousel-reviews broun-block" >
       
     <div class="container">
       <div class="row">
