@@ -24,8 +24,6 @@
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                  <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Created At</th>
                     <th>Updates At</th>
@@ -34,7 +32,6 @@
                 </thead>
                 <tfoot>
                   <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Created At</th>
                     <th>Updates At</th>
@@ -45,7 +42,6 @@
                 	
                    @foreach($data as $row)
                     <tr>
-                      <td>{{ $row->id }}</td>
                       <td>{{ $row->category_name }}</td>
                       <td>{{ $row->created_at->format('Y-d-m') }}</td>
                       <td>{{ $row->updated_at->format('Y-d-m') }}</td>

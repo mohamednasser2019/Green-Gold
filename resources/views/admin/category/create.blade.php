@@ -21,7 +21,7 @@
 		</div>
         <div class="card mb-3">
           <div class="card-header">
-            	<i class="fas fa-table"></i> Add New Record
+            	<i class="fas fa-table"></i> Add New Category
         	</div>
           <div class="card-body">
               {!! Form::open(['url' => 'admin/categories']) !!}

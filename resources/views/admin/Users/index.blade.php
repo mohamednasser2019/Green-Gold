@@ -14,7 +14,7 @@
 
 <!-- DataTables Example -->
 		<div style="margin-bottom: 10px;">
-			<a href="{{URL::to('admin/users/create')}}" class="btn btn-green add-row">Add New user</a>
+			<a href="{{URL::to('admin/users/create')}}" class="btn btn-primary btn-sm">Add New user</a>
 		</div>
 
         <div class="card mb-3">
