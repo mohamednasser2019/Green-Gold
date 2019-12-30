@@ -699,10 +699,8 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="wow fadeInRight" data-wow-delay="0.1s">
             <div class="text-right">
-              <div class="credits">
-                Designed by <a>Titan</a>
-              </div><div class="credits">
-                Developed by <a>4M</a>
+            <div class="credits">
+             <a href="https://www.facebook.com/4MSystems" target="_blank"> <img src="{{asset('public/img/hi.png')}}" width="10%" height="10%" /> </a>
               </div>
             </div>
           </div>
