@@ -3,9 +3,9 @@
 @section('navbar')
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="{{ URL::to('admin/home') }}">لصفحة الرئيسية </a>
+    <a href="{{ URL::to('admin/home') }}">{{trans('arabic_trans.index_title')}}</a>
   </li>
-  <li class="breadcrumb-item active">Categories</li>
+  <li class="breadcrumb-item active">{{trans('arabic_trans.index_categories')}}</li>
 </ol>
 @endsection
 
@@ -14,38 +14,41 @@
 
 <!-- DataTables Example -->
 		<div style="margin-bottom: 10px;">
-			<a href="{{ URL::to('admin/categories/create') }}" class="btn btn-primary btn-sm">Add New Category</a>
+			<a href="{{ URL::to('admin/categories/create') }}" class="btn btn-primary btn-sm">{{trans('arabic_trans.categories_create')}}</a>
 		</div>
         <div class="card mb-3">
           <div class="card-header">
-            	<i class="fas fa-table"></i> All Categories Data
+            	<i class="fas fa-table"></i>{{trans('arabic_trans.categories_pnl_header')}}
         	</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <th>Name</th>
-                    <th>Created At</th>
-                    <th>Updates At</th>
-                    <th>Actions</th>
+                <th>{{trans('arabic_trans.tbl_cat_Id')}}</th>
+                <th>{{trans('arabic_trans.tbl_cat_name')}}</th>
+                <th>{{trans('arabic_trans.created_at')}}</th>
+                <th>{{trans('arabic_trans.updated_at')}}</th>
+                <th></th>
                   </tr>
                 </thead>
                 <tfoot>
                   <tr>
-                    <th>Name</th>
-                    <th>Created At</th>
-                    <th>Updates At</th>
-                    <th>Actions</th>
+                      <th>{{trans('arabic_trans.tbl_cat_Id')}}</th>
+                      <th>{{trans('arabic_trans.tbl_cat_name')}}</th>
+                      <th>{{trans('arabic_trans.created_at')}}</th>
+                      <th>{{trans('arabic_trans.updated_at')}}</th>
+                      <th></th>
                   </tr>
                 </tfoot>
                 <tbody>
-                	
+
                    @foreach($data as $row)
                     <tr>
+                      <td>{{ $row->id }}</td>
                       <td>{{ $row->category_name }}</td>
                       <td>{{ $row->created_at->format('Y-d-m') }}</td>
                       <td>{{ $row->updated_at->format('Y-d-m') }}</td>
-                
+
 
 
                        <td class="center">

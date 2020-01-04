@@ -790,11 +790,9 @@
                             <div class="wow fadeInRight" data-wow-delay="0.1s">
                                 <div class="text-right">
                                     <div class="credits">
-                                        Designed by <a>Titan</a>
+                                        Designed & Developed by <a>Titan & 4M</a>
                                     </div>
-                                    <div class="credits">
-                                        Developed by <a>4M</a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

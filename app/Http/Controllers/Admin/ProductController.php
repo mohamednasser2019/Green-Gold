@@ -46,7 +46,7 @@ class ProductController extends Controller
     public function create()
     {
     	$categories = Category::pluck('category_name','id');
-    	
+
         return view($this->folderView.'create',compact('categories'));
     }
 
@@ -65,6 +65,7 @@ class ProductController extends Controller
             'benefits_of_use' => 'required|string',
             'usage_rates' => 'required|string',
             'aboutProduct' => 'required|string',
+            'packaging' => 'required|string',
         ]);
 
         $input = $request->all();
@@ -78,11 +79,11 @@ class ProductController extends Controller
 			$size 	 = $file->getSize();
 			$path 	 = $file->getRealPath();
 			$mime 	 = $file->getMimeType();
-			
+
 			// Move Image To Folder ..
 			$fileNewName = 'img_'.time().'.'.$ext;
 			$file->move(public_path('uploads/Products_Images'), $fileNewName);
-	        
+
 	        $input = $request->all();
 	        $input['product_img'] = $fileNewName;
 	    }
@@ -97,10 +98,10 @@ class ProductController extends Controller
         $input['created_by'] = auth()->user()->id;
 
         $this->objectName::create($input);
- 
+
 
         return redirect()->route('products.index')->with('success',$this->flash.' Created');
-        
+
     }
 
 
@@ -121,7 +122,7 @@ class ProductController extends Controller
     {
         $data = $this->objectName::find($id);
         $categories = Category::pluck('category_name','id');
-        
+
         return view($this->folderView.'edit', compact('data','categories'));
     }
 
@@ -152,11 +153,11 @@ class ProductController extends Controller
             $size    = $file->getSize();
             $path    = $file->getRealPath();
             $mime    = $file->getMimeType();
-            
+
             // Move Image To Folder ..
             $fileNewName = 'img_'.time().'.'.$ext;
             $file->move(public_path('uploads/Products_Images'), $fileNewName);
-            
+
             $input = $request->all();
             $input['product_img'] = $fileNewName;
 
@@ -164,14 +165,14 @@ class ProductController extends Controller
         {
             unset($input['product_img']);
         }
-           
+
 
 
         $this->objectName::find($id)->update($input);
 
 
        return redirect()->route('products.index')->with('success',$this->flash.' updated');
-        
+
 
     }
 

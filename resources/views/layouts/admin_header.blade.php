@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    
+
 
 <head>
 
@@ -13,7 +13,7 @@
 
 
 
-  <title>SB Admin - Dashboard</title>
+  <title>{{trans('arabic_trans.home_title')}}</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{ asset('public/js/admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -90,5 +90,4 @@
     <link rel="shortcut icon" href="favicon.ico" /> -->
 
 </head>
-    
-    
+<body class="login">

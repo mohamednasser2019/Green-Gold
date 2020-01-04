@@ -1,0 +1,27 @@
+<?php
+return [
+    'login_header' => 'تسجيل الدخول لحسابك',
+    'login_email' => 'البريد الالكترونى',
+    'login_password' => 'الرقم السرى',
+    'login_errors' => 'لديك بعض الاخطاء يرجى تصحيحها',
+    'home_title' => 'جرين جولد',
+    'login_btn' => 'تسجيل الدخول',
+    'index_title' => 'الصفحة الرئيسية',
+    'index_overview' => 'نظرة عامة',
+    'index_collapse' => 'تقليص',
+    'index_refresh' => 'تحديث',
+    'index_fullscreen' => 'شاشة كاملة',
+    'index_details' => 'تفاصيل  ',
+    'index_categories' => 'التصنيفات  ',
+    'tbl_cat_Id' => 'م  ',
+    'index_products' => 'المنتجات  ',
+    'index_users' => 'المستخدمين  ',
+    'tbl_cat_name' => 'الأسم',
+    'created_at' => 'تاريخ الانشاء  ',
+    'updated_at' => 'تاريخ التحديث  ',
+    'edit' => 'تعديل',
+    'delete' => 'حذف',
+    'search_tables' => 'البحث',
+    'logout' => 'تسجيل الخروج',
+
+];

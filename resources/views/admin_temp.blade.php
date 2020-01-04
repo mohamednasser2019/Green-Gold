@@ -1,40 +1,39 @@
-
 @include('layouts.admin_header')
 
 <body id="page-top">
 
-	
+
 @include('layouts.admin_nav')
 
- <div id="content-wrapper">
+<div id="content-wrapper">
 
-      <div class="container-fluid">
-
-
-@yield('navbar')
+    <div class="container-fluid">
 
 
-
-@include('layouts.errors')
-
-
-@include('layouts.messages')
+        @yield('navbar')
 
 
-@yield('content')
+
+        @include('layouts.errors')
 
 
-      </div>
-      <!-- /.container-fluid -->
+        @include('layouts.messages')
 
-      <!-- Sticky Footer -->
-     
+
+        @yield('content')
+
 
     </div>
-    <!-- /.content-wrapper -->
+    <!-- /.container-fluid -->
 
-  </div>
-  <!-- /#wrapper -->
+    <!-- Sticky Footer -->
+
+
+</div>
+<!-- /.content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
 
 
 @include('layouts.admin_modal')
