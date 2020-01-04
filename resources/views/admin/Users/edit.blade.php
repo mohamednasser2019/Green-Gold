@@ -27,17 +27,17 @@
 
             {!! Form::hidden('id',$data->id) !!}
             <div class="form-group">
-                {!! Form::label('name', 'Full NAme') !!}
-                {!! Form::text('name',$data->name,['class'=>'form-control', 'placeholder'=>'Enter The Full name']) !!}
+                {!! Form::label('name', {{trans('arabic_trans.tbl_users_FullName')}}) !!}
+                {!! Form::text('name',$data->name,['class'=>'form-control','placeholder'=>'Enter The email'] ) !!}
             </div>
             <div class="form-group">
-                {!! Form::label('email', 'Email') !!}
-                {!! Form::textarea('email',$data->email,['class'=>'form-control', 'rows'=>'3','placeholder'=>'Enter The email']) !!}
+                {!! Form::label('email', {{trans('arabic_trans.tbl_users_Email')}}) !!}
+                {!! Form::text('email',$data->email,['class'=>'form-control','placeholder'=>'Enter The email']) !!}
             </div>
             <div class="form-group">
-            {!! Form::label('password', 'Password') !!}
-            {!! Form::text('password',$data->password,['class'=>'form-control', 'placeholder'=>'Enter The password']) !!}
-            <!--  {!! Form::hidden('passwordOld',$data->password,['class'=>'form-control', 'placeholder'=>'Enter The password']) !!} -->
+            {!! Form::label('password', {{trans('arabic_trans.tbl_users_Enterpassword')}}) !!}
+            {!! Form::text('password',$data->password,['class'=>'form-control','type'=>'password' 'placeholder'=>'Enter The password']) !!}
+            <!--  {!! Form::hidden('passwordOld',$data->password,['class'=>'form-control', 'placeholder'=>'{{trans('arabic_trans.tbl_users_Enterpassword')}}']) !!} -->
             </div>
 
             <br>

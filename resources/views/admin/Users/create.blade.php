@@ -15,10 +15,6 @@
 
 @section('content')
 
-    <!-- DataTables Example -->
-    <div style="margin-bottom: 10px;">
-        <a href="{{ URL::to('admin/features') }}" class="btn btn-danger btn-sm">Return Back</a>
-    </div>
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i> Add New User
@@ -66,14 +62,14 @@
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="form-field-1">
-                            Full Name
+                           {{trans('arabic_trans.tbl_users_FullName')}}
                         </label>
 
                         <div class="col-md-6">
                                                      <span class="input-icon">
                                 <input id="name" type="text"
                                        class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
-                                       value="{{ old('name') }}" required autofocus><i class="fa fa-user"></i> </span>
+                                        required autofocus><i class="fa fa-user"></i> </span>
 
                             @if ($errors->has('name'))
                                 <span class="invalid-feedback" role="alert">
@@ -84,14 +80,15 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="form-field-1">
-                            Email
+                           {{trans('arabic_trans.tbl_users_Email')}}
+                            
                         </label>
 
                         <div class="col-md-6">
                                                      <span class="input-icon">
                                 <input id="email" type="email"
                                        class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
-                                       value="{{ old('email') }}" required><i class="fa  fa-envelope-o"></i> </span>
+                                       required><i class="fa  fa-envelope-o"></i> </span>
 
                             @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
@@ -103,7 +100,8 @@
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="form-field-1">
-                            Password
+                           {{trans('arabic_trans.tbl_users_Password')}}
+                            
                         </label>
 
                         <div class="col-md-6">
@@ -122,7 +120,8 @@
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="form-field-1">
-                            Confirm Password
+                           {{trans('arabic_trans.tbl_users_confirm')}}
+                        
                         </label>
 
                         <div class="col-md-6">
@@ -136,7 +135,7 @@
 
                     <div class="col-md-4 offset-md-4">
                         <button type="submit" class="btn btn-primary">
-                            Register
+                            Add new
                         </button>
                     </div>
                 </form>

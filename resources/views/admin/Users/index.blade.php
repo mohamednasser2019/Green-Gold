@@ -62,14 +62,15 @@
                                 </label>
                             </div>
                         </th>
-                        <th>Full Name</th>
-                        <th class="hidden-xs">Email</th>
-                        <th class="hidden-xs">Created at</th>
+                         <th>#</th>
+                        <th> {{trans('arabic_trans.tbl_users_FullName')}}</th>
+                        <th class="hidden-xs">{{trans('arabic_trans.tbl_users_Email')}}</th>
+                        <th class="hidden-xs">{{trans('arabic_trans.tbl_users_createdAt')}}</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
-
+<?php $i=1; ?>
                     @foreach($data as $row)
                         <tr>
                             <td class="center">
@@ -79,7 +80,8 @@
                                     </label>
                                 </div>
                             </td>
-
+   <td><?php echo $i; ?></td>
+                      <?php $i++; ?>
                             <td>{{ $row->name }}</td>
                             <td class="hidden-xs">{{ $row->email}}</td>
                             <td class="hidden-xs">{{ $row->created_at->format('Y-d-m') }}</td>
