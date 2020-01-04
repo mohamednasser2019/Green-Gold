@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 {!! Form::label('email', 'Email') !!}
-                {!! Form::textarea('email',$data->email,['class'=>'form-control', 'rows'=>'3','placeholder'=>'Enter The email']) !!}
+                {!! Form::text('email',$data->email,['class'=>'form-control', 'rows'=>'3','placeholder'=>'Enter The email']) !!}
             </div>
             <div class="form-group">
             {!! Form::label('password', 'Password') !!}

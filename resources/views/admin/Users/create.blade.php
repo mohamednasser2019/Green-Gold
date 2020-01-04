@@ -11,14 +11,9 @@
         <li class="breadcrumb-item active">Register New user</li>
     </ol>
 @endsection
-
-
 @section('content')
 
     <!-- DataTables Example -->
-    <div style="margin-bottom: 10px;">
-        <a href="{{ URL::to('admin/features') }}" class="btn btn-danger btn-sm">Return Back</a>
-    </div>
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i> Add New User
@@ -26,7 +21,6 @@
         <!-- start: TEXT FIELDS PANEL -->
         <div class="panel panel-white">
             <div class="panel-heading">
-                <h4 class="panel-title">Text <span class="text-bold">Fields</span></h4>
                 <div class="panel-tools">
                     <div class="dropdown">
                         <a data-toggle="dropdown" class="btn btn-xs dropdown-toggle btn-transparent-grey">
