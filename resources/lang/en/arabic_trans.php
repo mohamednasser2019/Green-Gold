@@ -13,7 +13,7 @@ return [
     'index_fullscreen' => 'Full Screen',
     'index_details' => 'View details',
     'index_categories' => 'Categories',
-    'tbl_cat_Id' => 'Id',
+    'tbl_cat_Id' => '#',
     'index_products' => 'Products',
     'index_users' => 'Users',
     'tbl_cat_name' => 'Name',
@@ -27,6 +27,7 @@ return [
     'categories_pnl_header' => 'All categories data',
     'products_create' => 'Add new product',
     'categories_create' => 'Add new category',
+
     'tbl_product_about' => 'About product',
     'tbl_product_usage_rates' => 'Usage rates',
     'tbl_product_packaging' => 'packaging',
@@ -34,6 +35,17 @@ return [
     'tbl_product_name' => 'Product Name',
     'tbl_product_cat' => 'Category',
     'tbl_product_img' => 'Product image',
+
+    'tbl_users_FullName' => 'Full Name',
+    'tbl_users_Email' => 'Email',
+    'tbl_users_createdAt' => 'Created At',
+    'tbl_users_Password' => 'Password',
+    'tbl_users_Enteremail' => 'Enter The Full name',
+    'tbl_The_Enter_Full_name' => 'Enter The Full name',
+    'tbl_users_Enterpassword' => 'Enter The password',
+    'tbl_users_confirm' => 'Confirm',
+  
+
     'actions' => 'Actions',
     'create_product_cat_hint' => 'Please Choose category',
     'index_categories_edit' => 'Please Edit your  category',

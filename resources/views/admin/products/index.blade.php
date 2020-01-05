@@ -50,10 +50,11 @@
                     </tr>
                     </tfoot>
                     <tbody>
-
+<?php $i=1; ?>
                     @foreach($data as $row)
                         <tr>
-                            <th>{{$row->id}}</th>
+                               <td><?php echo $i; ?></td>
+                      <?php $i++; ?>
                             <td><img width="100px" height="80px"
                                      src="{{ asset('public/uploads/Products_images/'.$row->product_img) }}"></td>
                             <td>{{ $row->getCategory->category_name }}</td>

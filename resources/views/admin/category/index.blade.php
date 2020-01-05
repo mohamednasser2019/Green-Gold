@@ -41,10 +41,12 @@
                   </tr>
                 </tfoot>
                 <tbody>
-
+<?php $i=1; ?>
                    @foreach($data as $row)
                     <tr>
-                      <td>{{ $row->id }}</td>
+
+                      <td><?php echo $i; ?></td>
+                      <?php $i++; ?>
                       <td>{{ $row->category_name }}</td>
                       <td>{{ $row->created_at->format('Y-d-m') }}</td>
                       <td>{{ $row->updated_at->format('Y-d-m') }}</td>

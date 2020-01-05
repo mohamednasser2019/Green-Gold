@@ -15,21 +15,21 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand">
-                        <img src="{{ asset('public/img/logo.png')}}" alt="logo" width="150" height="55"/>
+                        <img src="{{ asset('public/img/logo.png')}}" alt="logo" width="150" height="60"/>
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#intro">الرئيسيه</a></li>
-                        <li><a href="#service">قيمنا</a></li>
-                        <li><a href="#doctor">منتجاتنا</a></li>
-                        <li><a href="#facilities">خدماتنا</a></li>
-                        <li><a href="#testimonial">المعارض الدولية</a></li>
-                        <li><a href="#partner">شركاء</a></li>
-                        <li><a href="#aboutUs">عن الشركة</a></li>
                         <li><a href="#activities">نشاط الشركة</a></li>
+                        <li><a href="#aboutUs">عن الشركة</a></li>
+                        <li><a href="#partner">شركاء</a></li>
+                        <li><a href="#testimonial">المعارض الدولية</a></li>
+                        <li><a href="#facilities">خدماتنا</a></li>
+                        <li><a href="#doctor">منتجاتنا</a></li>
+                        <li><a href="#service">قيمنا</a></li>
+                        <li class="active"><a href="#intro">الرئيسيه</a></li>
 
                     </ul>
                 </div>
