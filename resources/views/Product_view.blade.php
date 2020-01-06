@@ -25,11 +25,13 @@
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
         <div class="row">
           <div class="col-lg-8 col-md-6 text-right about-two-grids">
-            <h1 class="title  mb-md-4 mb-sm-3 mb-3">  <p>  {{ $data->product_name}}<p> </h1>
+            <h1 class="title  mb-md-4 mb-sm-3 mb-3" style="color:blue;">  <p> {{ $data->product_name}} </p> </h1>
             <div class="about-para-txt">
-            <h2>:التقييم</h2> <br><p>{{$data->usage_rates}} </p>
-            <h2>:فوائد الاستخدام </h2> <br><p>{{$data->benefits_of_use}}</p>
-            <h2>:وصف المنتج</h2> <br><p>{{$data->aboutProduct}}></p>
+            <h2 style="color:green;">:التقييم</h2> <br><p>{{$data->usage_rates}} </p>
+            <h2 style="color:green;">:فوائد الاستخدام </h2> <br><p>{{$data->benefits_of_use}} </p>
+            <h2 style="color:green;">:وصف المنتج</h2> <br><p>{{$data->aboutProduct}} </p>
+
+            <h2 style="color:green;">: التعبئة والتغليف </h2> <br> <p>{{$data->packaging}}  </p>
 
             </div>
             <div class="view-buttn mt-lg-5 mt-md-4 mt-3">
