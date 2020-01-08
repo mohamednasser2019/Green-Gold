@@ -4,8 +4,12 @@ return [
     'login_email' => 'Please enter your email',
     'login_password' => 'Please enter your password',
     'login_errors' => 'Please check errors below',
-    'home_title' => 'Green Gold',
     'login_btn' => 'Login',
+
+    'logout' => 'Log out',
+
+    'home_title' => 'Green Gold',
+ 
     'index_title' => 'Home',
     'index_overview' => 'Overview',
     'index_collapse' => 'Collapse',
@@ -13,20 +17,14 @@ return [
     'index_fullscreen' => 'Full Screen',
     'index_details' => 'View details',
     'index_categories' => 'Categories',
-    'tbl_cat_Id' => '#',
     'index_products' => 'Products',
     'index_users' => 'Users',
-    'tbl_cat_name' => 'Name',
+
     'created_at' => 'Created at',
     'updated_at' => 'Updated at',
     'edit' => 'Edit',
     'delete' => 'Delete',
     'search_tables' => 'Search',
-    'logout' => 'Log out',
-    'products_pnl_header' => 'All product data',
-    'categories_pnl_header' => 'All categories data',
-    'products_create' => 'Add new product',
-    'categories_create' => 'Add new category',
 
     'tbl_product_about' => 'About product',
     'tbl_product_usage_rates' => 'Usage rates',
@@ -35,6 +33,8 @@ return [
     'tbl_product_name' => 'Product Name',
     'tbl_product_cat' => 'Category',
     'tbl_product_img' => 'Product image',
+    'products_create' => 'Add new product',
+    'products_pnl_header' => 'All product data',
 
     'tbl_users_FullName' => 'Full Name',
     'tbl_users_Email' => 'Email',
@@ -45,6 +45,11 @@ return [
     'tbl_users_Enterpassword' => 'Enter The password',
     'tbl_users_confirm' => 'Confirm',
   
+    'tbl_cat_Id' => '#',
+    'tbl_cat_image' => 'Image',
+    'tbl_cat_name' => 'Name',
+    'categories_create' => 'Add new category',
+    'categories_pnl_header' => 'All categories data',
 
     'actions' => 'Actions',
     'create_product_cat_hint' => 'Please Choose category',

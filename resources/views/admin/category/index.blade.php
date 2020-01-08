@@ -25,6 +25,7 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <th>{{trans('arabic_trans.tbl_cat_Id')}}</th>
+                 <th>{{trans('arabic_trans.tbl_cat_image')}}</th>
                 <th>{{trans('arabic_trans.tbl_cat_name')}}</th>
                 <th>{{trans('arabic_trans.created_at')}}</th>
                 <th>{{trans('arabic_trans.updated_at')}}</th>
@@ -34,6 +35,7 @@
                 <tfoot>
                   <tr>
                       <th>{{trans('arabic_trans.tbl_cat_Id')}}</th>
+                       <th>{{trans('arabic_trans.tbl_cat_image')}}</th>
                       <th>{{trans('arabic_trans.tbl_cat_name')}}</th>
                       <th>{{trans('arabic_trans.created_at')}}</th>
                       <th>{{trans('arabic_trans.updated_at')}}</th>
@@ -47,6 +49,8 @@
 
                       <td><?php echo $i; ?></td>
                       <?php $i++; ?>
+                       <td><img width="100px" height="80px"
+                                     src="{{ asset('public/uploads/category_Images/'.$row->category_img) }}"></td>
                       <td>{{ $row->category_name }}</td>
                       <td>{{ $row->created_at->format('Y-d-m') }}</td>
                       <td>{{ $row->updated_at->format('Y-d-m') }}</td>

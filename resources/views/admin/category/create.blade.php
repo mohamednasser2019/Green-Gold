@@ -20,10 +20,24 @@
             	<i class="fas fa-table"></i> {{trans('arabic_trans.categories_create')}}
         	</div>
           <div class="card-body">
-              {!! Form::open(['url' => 'admin/categories']) !!}
-
+              {!! Form::open(['url' => 'admin/categories', 'files'=>true]) !!}
+ <div class="form-group">
+                        <label class="col-sm-2 control-label" for="form-field-1">
+                            {{trans('arabic_trans.tbl_cat_image')}}
+                        </label>
+   <div class="form-group">
+                {{ Form::file('category_img',array('accept'=>'image/*','class'=>'form-control')) }}
+            </div>
+                      </div>
+         
+            
               <div class="form-group">
-                     {!! Form::text('category_name',null,['class'=>'form-control', 'placeholder'=>trans('arabic_trans.tbl_cat_name')]) !!}
+
+                 <label class="col-sm-2 control-label" for="form-field-1">
+                            {{trans('arabic_trans.tbl_cat_name')}}
+                        </label>
+
+                     {!! Form::text('category_name',null,['class'=>'form-control']) !!}
               </div>
 
               <br>
