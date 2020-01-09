@@ -10,7 +10,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('login', 'Api\UserAuthController@login');
 
+// Route::get('product', 'Api\ProductApiController@index');
+Route::post('getProductService', 'Api\ProductApiController@show');
 
 
+Route::get('getCategoriesService', 'Api\CategoryApiController@index');
 
 
