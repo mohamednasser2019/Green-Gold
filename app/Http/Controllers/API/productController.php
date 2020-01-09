@@ -1,0 +1,183 @@
+<?php
+
+namespace App\Http\Controllers\API;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+use App\Product;
+use Validator;
+use Auth;
+// use App\Http\Resources\FeatureResource;
+
+class productController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    
+
+    public $objectName;
+
+    public function __construct(Product $model)
+    {
+        // $this->middleware('auth:api');
+        $this->objectName = $model;
+    }
+
+
+	public function sendResponse($status, $data = null)
+	{
+		if ($status == false)
+		{
+			return response(
+				[
+					'status' => false,
+					'errors' => $data
+				]
+			);
+		}
+		else
+		{
+			return response(
+				[
+					'status' => true,
+					'data' => $data
+				]
+			);
+		}
+	}
+
+	public function errorsMessages($errArray)
+    {
+        $valArr = array();
+        foreach ($errArray->toArray() as $key => $value) { 
+     	    $errStr = $value[0];
+            array_push($valArr, $errStr);
+        }
+
+        return $valArr;
+    }
+
+
+    public function makeValidate($inputs,$rules)
+    {
+    	
+		$validator = Validator::make($inputs,$rules);
+		if($validator->fails())
+		{
+			return $this->errorsMessages($validator->messages());
+		}
+		else
+		{
+			return true;
+		}
+    }
+
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request)
+    {
+        //
+        $validate = $this->makeValidate($request->all(),['product_id'=>'required']);
+
+		if (!is_array($validate))
+		{
+			$id = $request->input('product_id');
+            // $data = Product::findOrFail(intval($id));
+           $data=Product::select(array('id', 'aboutProduct', 'benefits_of_use', 'packaging', 'product_img',
+             'product_name', 'usage_rates'))
+           ->where('id',$id)->get();
+
+			return $this->sendResponse(true, $data);
+        }
+		else
+		{
+			return $this->sendResponse(false, $validate);
+		}
+
+
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getProductbyCategory(Request $request)
+    {
+        $validate = $this->makeValidate($request->all(),['category_id'=>'required']);
+
+		if (!is_array($validate))
+		{
+            $category_id = $request->input('category_id');
+            // $id = $request->input('id');
+
+            // $data = Product::findOrFail(intval($id));
+            $data=Product::select(array('id','product_name', 'product_img'))
+              ->where('category_id',$category_id)->get();
+			    return $this->sendResponse(true, $data);
+        }
+		else
+		{
+			return $this->sendResponse(false, $validate);
+		}
+
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}

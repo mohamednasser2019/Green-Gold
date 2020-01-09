@@ -8,7 +8,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('login', 'Api\UserAuthController@login');
+Route::post('login', 'API\UserAuthController@login');
+
+Route::get('getCategoriesService', 'API\CategoryController@index');
+
+Route::get('getProductService', 'API\productController@show');
+
+Route::get('getProductsService', 'API\productController@getProductbyCategory');
+
 
 
 
