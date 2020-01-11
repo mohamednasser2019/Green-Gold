@@ -29,8 +29,12 @@ class HomeController extends Controller
        $Product = Product::all();
     //    $Gallery = Gallery::all();
 
-       $Category = Category::all();
+       // $Category = Category::all()->orderBy('sorting','desc')->get();
+     // $Category = Category::all();
 
+      $Category = DB::table('Categories')
+                ->orderBy('sorting', 'asc')
+                ->get();
     //    $Features = Features::where('type','feature')
     //    ->orderBy('id','desc')
     //    ->limit(4)->get();
