@@ -12,7 +12,7 @@ a:focus {
 	background: #4ACCD1;
 }
 
-.con1 > div, .con2 > div, .con3 > div { 
+.con1 > div, .con2 > div, .con3 > div {
 	background-color: #4ACCD1;
 }
 
@@ -38,7 +38,7 @@ a:focus {
 
 /* top */
 .top-area {
-	background: #3fbbc0;
+	background: #fff;
 }
 
 /* menu */
