@@ -60,7 +60,7 @@ class ProductWebsiteController extends Controller
      */
     public function show($id)
     {
-        $data = $this->objectName::with('getCategory')->orderBy('id', 'desc')->find($id);
+        $data = $this->objectName::with('getCategory')->find($id);
 
         return view($this->folderView.'Product_view', compact('data'));
     }

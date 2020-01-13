@@ -30,7 +30,7 @@ class ProductController extends Controller
 
     public function show($id)
     {
-        $data = $this->objectName::with('getCategory')->orderBy('id', 'desc')->find($id);
+        $data = $this->objectName::with('getCategory')->find($id);
 
         
 
