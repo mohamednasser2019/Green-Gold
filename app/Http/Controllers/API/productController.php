@@ -111,11 +111,11 @@ class productController extends Controller
     public function show(Request $request)
     {
         //
-        $validate = $this->makeValidate($request->all(),['product_id'=>'required']);
+        $validate = $this->makeValidate($request->all(),['products_id'=>'required']);
 
 		if (!is_array($validate))
 		{
-			$id = $request->input('product_id');
+			$id = $request->input('products_id');
             // $data = Product::findOrFail(intval($id));
            $data=Product::select(array('id', 'aboutProduct', 'benefits_of_use', 'packaging', 'product_img',
              'product_name', 'usage_rates'))

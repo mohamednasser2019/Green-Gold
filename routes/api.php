@@ -18,6 +18,3 @@ Route::get('getProductsService', 'API\productController@getProductbyCategory');
 
 
 
-
-
-

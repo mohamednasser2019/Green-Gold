@@ -31,7 +31,8 @@
             <h2 style="color:green;">:فوائد الاستخدام </h2> <br><p>{{$data->benefits_of_use}} </p>
             <h2 style="color:green;">:وصف المنتج</h2> <br><p>{{$data->aboutProduct}} </p>
 
-            <h2 style="color:green;">: العبوات </h2> <br> <p>{{$data->packaging}}  </p>
+             <h2 style="color:green;">: العبوات </h2> <br> <p>{{$data->packaging}}  </p>
+
 
             </div>
             <div class="view-buttn mt-lg-5 mt-md-4 mt-3">

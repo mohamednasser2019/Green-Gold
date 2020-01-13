@@ -25,12 +25,18 @@ class HomeController extends Controller
     public function index()
     {
     //    $settings = configration::find(1);
-
-       $Product = Product::all();
+    $Product =  Product::select()
+    ->orderby('created_at','desc')->get();
+      
+    //    Product::all();
     //    $Gallery = Gallery::all();
 
-       $Category = Category::all();
+       // $Category = Category::all()->orderBy('sorting','desc')->get();
+     // $Category = Category::all();
 
+      $Category = DB::table('Categories')
+                ->orderBy('sorting', 'asc')
+                ->get();
     //    $Features = Features::where('type','feature')
     //    ->orderBy('id','desc')
     //    ->limit(4)->get();
