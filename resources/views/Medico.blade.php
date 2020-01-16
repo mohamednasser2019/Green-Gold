@@ -351,14 +351,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div id="filters-container" class="cbp-l-filters-alignRight">
-                            <div data-filter="*" class="cbp-filter-item">كل المنتجات
+                        <div id="filters-container" class="cbp-filter-item-active cbp-l-filters-alignLeft">
+                            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">كل المنتجات
                                 ({{ count($data['Product'])+1 }})
                             </div>
                             @foreach($data['Category'] as $cat)
                                 @if($cat->id==5)
                                     <div data-filter=".{{$cat->id}}"
-                                         class="cbp-filter-item-active cbp-filter-item">{{$cat->category_name}}
+                                         class=" cbp-filter-item">{{$cat->category_name}}
                                         (
                                         <div class="cbp-filter-counter"></div>
                                         )

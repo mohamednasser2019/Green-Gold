@@ -25,9 +25,8 @@ class HomeController extends Controller
     public function index()
     {
     //    $settings = configration::find(1);
-    $Product =  Product::select()
-    ->orderby('created_at','desc')->get();
-      
+    $Product =  Product::orderBy('created_at','desc')->get();
+
     //    Product::all();
     //    $Gallery = Gallery::all();
 
@@ -51,12 +50,12 @@ class HomeController extends Controller
     //  $data['services']= $services;
      $data['Category']= $Category;
     //  $data['Gallery']= $Gallery;
-     
+
 // dd($data);
 
         return view('Medico', compact('data'));
     }
-    
+
 
     // public function readMore($id, $title)
     // {
