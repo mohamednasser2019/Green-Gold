@@ -131,10 +131,33 @@ class CategoriesController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required|string',
+            'category_name' => 'required|string',
         ]);
 
         $input = $request->all();
+
+
+              if($request['category_img'] != null)
+        {
+            // This is Image Information ...
+            $file    = $request->file('category_img');
+            $name    = $file->getClientOriginalName();
+            $ext     = $file->getClientOriginalExtension();
+            $size    = $file->getSize();
+            $path    = $file->getRealPath();
+            $mime    = $file->getMimeType();
+
+            // Move Image To Folder ..
+            $fileNewName = 'img_'.time().'.'.$ext;
+            $file->move(public_path('uploads/category_Images'), $fileNewName);
+
+            $input = $request->all();
+            $input['category_img'] = $fileNewName;
+
+        }else
+        {
+            unset($input['category_img']);
+        }
  
         $this->objectName::find($id)->update($input);
 

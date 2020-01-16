@@ -237,7 +237,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="filters-container" class="cbp-l-filters-alignLeft">
-                            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">كل المنتجات
+                            <div data-filter=".5" class="cbp-filter-item-active cbp-filter-item">كل المنتجات
                                 ({{ count($data['Product'])+1 }})
                             </div>
                             @foreach($data['Category'] as $cat)
