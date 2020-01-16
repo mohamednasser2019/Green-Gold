@@ -25,8 +25,10 @@ class HomeController extends Controller
     public function index()
     {
     //    $settings = configration::find(1);
-
-       $Product = Product::all();
+    $Product =  Product::select()
+    ->orderby('created_at','desc')->get();
+      
+    //    Product::all();
     //    $Gallery = Gallery::all();
 
        // $Category = Category::all()->orderBy('sorting','desc')->get();
