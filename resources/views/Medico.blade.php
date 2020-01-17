@@ -29,6 +29,7 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+
                     <ul class="nav navbar-nav">
                         {{--                        <li><a href="#activities">نشاط الشركة</a></li>--}}
                         <li><a href="#facilities">خدماتنا</a></li>
@@ -47,45 +48,74 @@
             </div>
             <!-- /.container -->
         </nav>
+        <section id="slider" data-stellar-background-ratio="0.5" class="intro">
+            <div class="intro-content intro-nobg">
+                <div class="container">
+                    <div class="row">
+                        <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="{{ asset('public/img/slider/00.png')}}"
+                                         class="img-responsive" >
 
-        <section id="slider" data-stellar-background-ratio="0.5">
-            <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="https://source.unsplash.com/LAaSoL0LrYs/1920x1080">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">First Slide</h2>
-                            <p class="lead">This is a description for the third slide.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="https://source.unsplash.com/bF2vsubyHcQ/1920x1080">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">Second Slide</h2>
-                            <p class="lead">This is a description for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="https://source.unsplash.com/bF2vsubyHcQ/1920x1080">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">Thrid Slide</h2>
-                            <p class="lead">This is a description for the second slide.</p>
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('public/img/slider/01.png')}}"
+                                         class="img-responsive">
+
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('public/img/slider/02.png')}}"
+                                         class="img-responsive">
+
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('public/img/slider/03.png')}}"
+                                    >
+
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('public/img/slider/04.png')}}"
+                                         class="img-responsive">
+
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('public/img/slider/05.png')}}"
+                                         class="img-responsive" >
+
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('public/img/slider/06.png')}}"
+                                    >
+
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('public/img/slider/07.png')}}"
+                                         class="img-responsive" >
+
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('public/img/slider/08.png')}}"
+                                         class="img-responsive" >
+
+                                </div>
+                            </div>
+
+                            <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+
                         </div>
                     </div>
                 </div>
-
-                <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-
             </div>
         </section>
 
@@ -351,8 +381,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div id="filters-container" class="cbp-filter-item-active cbp-l-filters-alignLeft">
-                            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">كل المنتجات
+                        <div id="filters-container" class="cbp-l-filters-alignLeft">
+                            <div data-filter=".5" class="cbp-filter-item-active cbp-filter-item">كل المنتجات
                                 ({{ count($data['Product'])+1 }})
                             </div>
                             @foreach($data['Category'] as $cat)
@@ -677,24 +707,15 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-3">
                         <div class="partner">
-                            <a href="#"><img src="{{ asset('public/img/dummy/partner-1.jpg')}}" alt=""/></a>
+                            <a href="#"><img src="{{ asset('public/img/dummy/partner-1.png')}}" class="img-responsive" alt=""/></a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="partner">
-                            <a href="#"><img src="{{ asset('public/img/dummy/partner-2.jpg')}}" alt=""/></a>
+                            <a href="#"><img src="{{ asset('public/img/dummy/partner-2.png')}}" class="img-responsive" alt=""/></a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="partner">
-                            <a href="#"><img src="{{ asset('public/img/dummy/partner-3.jpg')}}" alt=""/></a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="partner">
-                            <a href="#"><img src="{{ asset('public/img/dummy/partner-4.jpg')}}" alt=""/></a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

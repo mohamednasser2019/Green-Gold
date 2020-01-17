@@ -22,11 +22,42 @@
         	</div>
           <div class="card-body">
 
-              {!! Form::model($data, ['route' => ['categories.update',$data->id] , 'method'=>'PUT']) !!}
-
+              {!! Form::model($data, ['route' => ['categories.update',$data->id] , 'method'=>'PUT','files'=> true]) !!}
+  <div class="row">
+ <div class="col-md-6">
               <div class="form-group">
-                     {!! Form::text('category_name',$data->name,['class'=>'form-control', 'placeholder'=>trans('arabic_trans.tbl_cat_name')]) !!}
+                {!! Form::label('name', trans('arabic_trans.tbl_cat_name')) !!}
+
+                {!! Form::text('category_name',$data->name,['class'=>'form-control']) !!}       
               </div>
+            </div>
+ <div class="col-md-6">
+                 <div class="form-group">
+                        <label>
+                            {{trans('arabic_trans.tbl_cat_image')}}
+                        </label>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="fileupload-new thumbnail"><img
+                                    src="{{ asset('public/uploads/category_Images/'.$data->category_img) }}" alt="">
+                            </div>
+                            <div class="fileupload-preview fileupload-exists thumbnail"></div>
+                            <div class="user-edit-image-buttons">
+                          <span class="btn btn-azure btn-file">
+                            <span class="fileupload-new "><i class="fa fa-picture "></i> Change image</span>
+
+                            {{ Form::file('category_img',array('accept'=>'image/*','class'=>'form-control')) }}
+                          <span class="fileupload-exists "><i class="fa fa-picture"></i> Change</span>
+                            <input type="file">
+                          </span>
+                                <a href="#" class="btn fileupload-exists btn-danger" data-dismiss="fileupload">
+                                    <i class="fa fa-times"></i> Cancel
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+</div>
+</div>
+
               <br>
               <div class="form-group">
               {!! Form::submit('Edit Data', array('class'=>'btn btn-primary')) !!}

@@ -34,6 +34,7 @@ textarea {
     font-size: inherit;
     line-height: inherit;
 }
+
 /* ===========
 layout
 ============= */
@@ -266,7 +267,7 @@ Navigation
 
 .navbar-brand {
 
-margin-bottom: 20px;
+    margin-bottom: 20px;
     padding-bottom: 0;
 
 }
@@ -983,13 +984,12 @@ hr.bold {
 
 .intro {
     width: 100%;
-    position: relative;
+
 }
 
 .intro-content {
-    background: url('../img/dummy/bg1.jpg') no-repeat top center;
-    width: 100%;
-    height: 700px;
+    background-color: white;
+
     background-size: cover;
 
 }
@@ -997,8 +997,9 @@ hr.bold {
 .intro-content.intro-nobg {
     background: #fff;
     position: relative;
-    margin: 0;
-    padding: 140px 0 60px;
+    width: 100%;
+    margin-top: 0px;
+    /*padding: 140px 0 60px;*/
 }
 
 
@@ -2308,7 +2309,7 @@ a.btn:focus {
     }
 
     .intro-content {
-        background: url(../../img/dummy/bg1.jpg) no-repeat top center;
+        background-color: white;
         padding: 200px 0 60px;
         background-size: cover;
     }
