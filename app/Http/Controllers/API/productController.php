@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use Validator;
 use Auth;
+use DB;
 
 // use App\Http\Resources\FeatureResource;
 
@@ -74,7 +75,16 @@ class productController extends Controller
     public function index()
     {
         $data = Product::all('id', 'product_name', 'product_img');
-        return $this->sendResponse(200, $data);
+
+
+ $posts = Product::select(array("id", "product_name",DB::raw("CONCAT('Green-Gold/public/uploads/Products_images/', product_img) AS product_img")))->get();
+
+
+       // dd($data);
+
+         // $data['product_img'] = 'uploads/Products_Images'.$data['product_img'];
+
+        return $this->sendResponse(200, $posts);
     }
 
     /**

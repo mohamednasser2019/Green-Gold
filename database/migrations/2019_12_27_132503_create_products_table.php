@@ -17,10 +17,10 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('product_name');
             $table->string('product_img');
-            $table->string('benefits_of_use');
-            $table->string('usage_rates');
+            $table->text('benefits_of_use');
+            $table->text('usage_rates');
             $table->string('packaging');
-            $table->string('aboutProduct');
+            $table->text('aboutProduct');
             $table->integer('created_by')->unsigned();
             $table->integer('category_id')->unsigned();
 
