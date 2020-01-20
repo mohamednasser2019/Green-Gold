@@ -74,7 +74,8 @@ class productController extends Controller
     public function index()
     {
         $data = Product::all('id', 'product_name', 'product_img');
-        return $this->sendResponse(200, $data);
+
+         return $this->sendResponse(200, $data);
     }
 
     /**
@@ -112,9 +113,7 @@ class productController extends Controller
         if (!is_array($validate)) {
             $id = $request->input('products_id');
             // $data = Product::findOrFail(intval($id));
-            $data = Product::select(array('id', 'aboutProduct', 'benefits_of_use', 'packaging', 'product_img',
-                'product_name', 'usage_rates'))
-                ->where('id', $id)->get();
+            $data = Product::where('id', $id)->first();
 
             return $this->sendResponse(200, $data);
         } else {
@@ -141,6 +140,7 @@ class productController extends Controller
             // $data = Product::findOrFail(intval($id));
             $data = Product::select(array('id', 'product_name', 'product_img'))
                 ->where('category_id', $category_id)->get();
+
             return $this->sendResponse(200, $data);
         } else {
             return $this->sendResponse(401, $validate);

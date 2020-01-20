@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Green Gold</title>
+  <title>جرين جولد للمشروعات الزراعي</title>
 
   <!-- css -->
   <link href="{{ asset('public/css/medico/bootstrap.min.css')}}" rel="stylesheet" type="text/css">

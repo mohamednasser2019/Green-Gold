@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 // use App\configration;
 // use App\Features;
 use App\Product;
@@ -24,34 +25,12 @@ class HomeController extends Controller
 
     public function index()
     {
-    //    $settings = configration::find(1);
-    $Product =  Product::orderBy('created_at','desc')->get();
-
-    //    Product::all();
-    //    $Gallery = Gallery::all();
-
-       // $Category = Category::all()->orderBy('sorting','desc')->get();
-     // $Category = Category::all();
-
-      $Category = DB::table('Categories')
-                ->orderBy('sorting', 'asc')
-                ->get();
-    //    $Features = Features::where('type','feature')
-    //    ->orderBy('id','desc')
-    //    ->limit(4)->get();
-
-        // $services = Features::where('type','service')
-        //             ->orderBy('id','desc')
-        //             ->limit(6)->get();
-
-    //  $data['settings']= $settings;
-     $data['Product']= $Product;
-    //  $data['Features']= $Features;
-    //  $data['services']= $services;
-     $data['Category']= $Category;
-    //  $data['Gallery']= $Gallery;
-
-// dd($data);
+        $Product = Product::orderBy('created_at', 'desc')->get();
+        $Category = DB::table('categories')
+            ->orderBy('sorting', 'asc')
+            ->get();
+        $data['Product'] = $Product;
+        $data['Category'] = $Category;
 
         return view('Medico', compact('data'));
     }

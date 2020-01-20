@@ -19,4 +19,11 @@ class Product extends Model
         return $this->hasOne('App\User', 'id', 'created_by');
     }
 
+    public function getProductImgAttribute($img)
+    {
+        if ($img)
+            return asset('public/uploads/Products_Images') . '/' . $img;
+        else
+            return "";
+    }
 }

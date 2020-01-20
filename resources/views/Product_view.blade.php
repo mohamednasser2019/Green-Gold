@@ -27,9 +27,9 @@
           <div class="col-lg-8 col-md-6 text-right about-two-grids">
             <h1 class="title  mb-md-4 mb-sm-3 mb-3" style="color:blue;">  <p> {{ $data->product_name}} </p> </h1>
             <div class="about-para-txt">
-            <h2 style="color:green;">:التقييم</h2> <br><p>{{$data->usage_rates}} </p>
-            <h2 style="color:green;">:فوائد الاستخدام </h2> <br><p>{{$data->benefits_of_use}} </p>
-            <h2 style="color:green;">:وصف المنتج</h2> <br><p>{{$data->aboutProduct}} </p>
+                <h2 style="color:green;">:عن المنتج</h2> <br><p>{{$data->aboutProduct}} </p>
+                <h2 style="color:green;">:معدلات الاستخدام</h2> <br><p>{{$data->usage_rates}} </p>
+                <h2 style="color:green;">:فوائد الاستخدام </h2> <br><p>{{$data->benefits_of_use}} </p>
 
              <h2 style="color:green;">: العبوات </h2> <br> <p>{{$data->packaging}}  </p>
 
@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6 about-imgs-txt">
-            <img src="{{asset('public/uploads/Products_Images/'.$data->product_img)}}" alt="news image" class="img-fluid">
+            <img src="{{$data->product_img}}" alt="news image" class="img-fluid">
           </div>
         </div>
       </div>
