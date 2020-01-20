@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use Validator;
 use Auth;
+use DB;
 
 // use App\Http\Resources\FeatureResource;
 
@@ -74,8 +75,7 @@ class productController extends Controller
     public function index()
     {
         $data = Product::all('id', 'product_name', 'product_img');
-
-         return $this->sendResponse(200, $data);
+        return $this->sendResponse(200, $data);
     }
 
     /**

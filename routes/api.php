@@ -15,6 +15,7 @@ Route::get('getCategoriesService', 'API\CategoryController@index');
 Route::get('getProductService', 'API\productController@show');
 
 Route::get('getProductsService', 'API\productController@getProductbyCategory');
+
 Route::get('getAllProduct', 'API\productController@index');
 
 
