@@ -73,7 +73,7 @@
                         </label>
                         <div class="fileupload fileupload-new" data-provides="fileupload">
                             <div class="fileupload-new thumbnail"><img
-                                    src="{{ asset('public/uploads/Products_Images/'.$data->product_img) }}" alt="">
+                                    src="{{ $data->product_img }}" alt="">
                             </div>
                             <div class="fileupload-preview fileupload-exists thumbnail"></div>
                             <div class="user-edit-image-buttons">

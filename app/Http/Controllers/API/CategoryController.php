@@ -26,14 +26,14 @@ class CategoryController extends Controller
     }
 
 
-    
+
 	public function sendResponse($status, $data = null)
 	{
-		if ($status == false)
+		if ($status == 401)
 		{
 			return response(
 				[
-					'status' => false,
+					'status' => 401,
 					'errors' => $data
 				]
 			);
@@ -42,7 +42,7 @@ class CategoryController extends Controller
 		{
 			return response(
 				[
-					'status' => true,
+					'status' => 200,
 					'data' => $data
 				]
 			);
@@ -52,7 +52,7 @@ class CategoryController extends Controller
 	public function errorsMessages($errArray)
     {
         $valArr = array();
-        foreach ($errArray->toArray() as $key => $value) { 
+        foreach ($errArray->toArray() as $key => $value) {
      	    $errStr = $value[0];
             array_push($valArr, $errStr);
         }
@@ -63,7 +63,7 @@ class CategoryController extends Controller
 
     public function makeValidate($inputs,$rules)
     {
-    	
+
 		$validator = Validator::make($inputs,$rules);
 		if($validator->fails())
 		{
@@ -78,8 +78,8 @@ class CategoryController extends Controller
     {
         $data =Category::all('id','category_name','category_img');
 
-        return $this->sendResponse(true, $data);
-        
+        return $this->sendResponse(200, $data);
+
     }
 
     /**

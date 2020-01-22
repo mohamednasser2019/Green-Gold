@@ -17,7 +17,7 @@ class CreateCategoriesTable extends Migration
     $table->increments('id');
     $table->string('category_name');
     $table->string('category_img');
-    $table->integer('sorting');
+    $table->integer('sorting')->default('1');
     $table->integer('created_by')->unsigned();
     $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
     $table->timestamps();

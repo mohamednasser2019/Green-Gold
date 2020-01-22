@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use Validator;
 use Auth;
+use DB;
+
 // use App\Http\Resources\FeatureResource;
 
 class productController extends Controller
@@ -17,7 +19,7 @@ class productController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
 
     public $objectName;
 
@@ -28,33 +30,30 @@ class productController extends Controller
     }
 
 
-	public function sendResponse($status, $data = null)
-	{
-		if ($status == false)
-		{
-			return response(
-				[
-					'status' => false,
-					'errors' => $data
-				]
-			);
-		}
-		else
-		{
-			return response(
-				[
-					'status' => true,
-					'data' => $data
-				]
-			);
-		}
-	}
+    public function sendResponse($status, $data = null)
+    {
+        if ($status == 401) {
+            return response(
+                [
+                    'status' => 401,
+                    'errors' => $data
+                ]
+            );
+        } else {
+            return response(
+                [
+                    'status' => 200,
+                    'data' => $data
+                ]
+            );
+        }
+    }
 
-	public function errorsMessages($errArray)
+    public function errorsMessages($errArray)
     {
         $valArr = array();
-        foreach ($errArray->toArray() as $key => $value) { 
-     	    $errStr = $value[0];
+        foreach ($errArray->toArray() as $key => $value) {
+            $errStr = $value[0];
             array_push($valArr, $errStr);
         }
 
@@ -62,23 +61,21 @@ class productController extends Controller
     }
 
 
-    public function makeValidate($inputs,$rules)
+    public function makeValidate($inputs, $rules)
     {
-    	
-		$validator = Validator::make($inputs,$rules);
-		if($validator->fails())
-		{
-			return $this->errorsMessages($validator->messages());
-		}
-		else
-		{
-			return true;
-		}
+
+        $validator = Validator::make($inputs, $rules);
+        if ($validator->fails()) {
+            return $this->errorsMessages($validator->messages());
+        } else {
+            return true;
+        }
     }
 
     public function index()
     {
-        //
+        $data = Product::all('id', 'product_name', 'product_img');
+        return $this->sendResponse(200, $data);
     }
 
     /**
@@ -94,7 +91,7 @@ class productController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -105,28 +102,23 @@ class productController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request)
     {
         //
-        $validate = $this->makeValidate($request->all(),['products_id'=>'required']);
+        $validate = $this->makeValidate($request->all(), ['products_id' => 'required']);
 
-		if (!is_array($validate))
-		{
-			$id = $request->input('products_id');
+        if (!is_array($validate)) {
+            $id = $request->input('products_id');
             // $data = Product::findOrFail(intval($id));
-           $data=Product::select(array('id', 'aboutProduct', 'benefits_of_use', 'packaging', 'product_img',
-             'product_name', 'usage_rates'))
-           ->where('id',$id)->get();
+            $data = Product::where('id', $id)->first();
 
-			return $this->sendResponse(true, $data);
+            return $this->sendResponse(200, $data);
+        } else {
+            return $this->sendResponse(401, $validate);
         }
-		else
-		{
-			return $this->sendResponse(false, $validate);
-		}
 
 
     }
@@ -134,35 +126,33 @@ class productController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function getProductbyCategory(Request $request)
     {
-        $validate = $this->makeValidate($request->all(),['category_id'=>'required']);
+        $validate = $this->makeValidate($request->all(), ['category_id' => 'required']);
 
-		if (!is_array($validate))
-		{
+        if (!is_array($validate)) {
             $category_id = $request->input('category_id');
             // $id = $request->input('id');
 
             // $data = Product::findOrFail(intval($id));
-            $data=Product::select(array('id','product_name', 'product_img'))
-              ->where('category_id',$category_id)->get();
-			    return $this->sendResponse(true, $data);
+            $data = Product::select(array('id', 'product_name', 'product_img'))
+                ->where('category_id', $category_id)->get();
+
+            return $this->sendResponse(200, $data);
+        } else {
+            return $this->sendResponse(401, $validate);
         }
-		else
-		{
-			return $this->sendResponse(false, $validate);
-		}
 
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -173,7 +163,7 @@ class productController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

@@ -30,6 +30,7 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+
                     <ul class="nav navbar-nav">
                         {{--                        <li><a href="#activities">نشاط الشركة</a></li>--}}
                         <li><a href="#facilities">خدماتنا</a></li>
@@ -48,44 +49,70 @@
             </div>
             <!-- /.container -->
         </nav>
+        <section id="slider" data-stellar-background-ratio="0.5" class="home-section paddingbot-60 parallax">
+            <div class="carousel-reviews broun-block">
+                <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{ asset('public/img/slider/00.png')}}"
+                                 class="img-responsive">
 
-        <section id="slider" data-stellar-background-ratio="0.5">
-            <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="https://source.unsplash.com/LAaSoL0LrYs/1920x1080">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">First Slide</h2>
-                            <p class="lead">This is a description for the third slide.</p>
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('public/img/slider/01.png')}}"
+                                 class="img-responsive">
+
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('public/img/slider/02.png')}}"
+                                 class="img-responsive">
+
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('public/img/slider/03.png')}}"
+                            >
+
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('public/img/slider/04.png')}}"
+                                 class="img-responsive">
+
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('public/img/slider/05.png')}}"
+                                 class="img-responsive">
+
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('public/img/slider/06.png')}}"
+                            >
+
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('public/img/slider/07.png')}}"
+                                 class="img-responsive">
+
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('public/img/slider/08.png')}}"
+                                 class="img-responsive">
+
                         </div>
                     </div>
-                    <div class="item">
-                        <img src="https://source.unsplash.com/bF2vsubyHcQ/1920x1080">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">Second Slide</h2>
-                            <p class="lead">This is a description for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="https://source.unsplash.com/bF2vsubyHcQ/1920x1080">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">Thrid Slide</h2>
-                            <p class="lead">This is a description for the second slide.</p>
-                        </div>
-                    </div>
+
+                    <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+
                 </div>
-
-                <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
 
             </div>
         </section>
@@ -96,53 +123,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
+
                         <div class="callaction bg-gray">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="wow lightSpeedIn" data-wow-delay="0.1s">
-                                        <h3 style="text-align: center;color:green;">عن الشركة</h3>
-                                        <div class="text-right">
-                                            <p class="text-bold" style="text-align: center; font-size: 17px;"
-                                               id="about">
-                                                جرين جولد للتوكيلات التجارية والزراعية شركة مصرية متخصصة في تغذية
-                                                النباتات
-                                                والحماية من الأمراض وعلامة تجارية مسجلة "جرين جولد" , تميزت من خلال سجل
-                                                حافل
-                                                من النجاحات المستمره منذ إنشائها عام2005 ، بدعم السوق المصرية والعربية
-                                                والافريقية بالخدمات الموثوقة والمنتجات المميزة. الشركة رائده فى السوق
-                                                المصرية بتخصصها فى خدمه مزارعى نظم الزراعة العضوية و الجلوبال جاب بشكل
-                                                خاص
-                                                والسوق الزراعية بشكل عام بتقديم توليفة من المدخلات الزراعية المتميزة
-                                                والمتوافقة مع متطلبات المجلس التصديري للحاصلات الزراعية المصرية والهيئة
-                                                القومية لسلامة الغذاء المصرية ، من اسمدة ومخصبات ومبيدات زراعية اساسية
-                                                ومتخصصة بشقيها الكميائي والعضوي لدعم عملاؤنا مصدري الحاصلات الزراعية
-                                                ونحرص
-                                                على إنتقاء الشركاء المتخصصين فى هذا المجال لضمان جوده المنتجات والتى تفي
-                                                بهذه الاغراض كذلك تقديم الدعم الفنى عن طريق انتشار فروعنا ومهندسينا
-                                                بكافة
-                                                المناطق الزراعية وعقد الندوات وورش العمل والأيام الحقلية بالتعاون مع
-                                                كبرى
-                                                الشركات العالمية فى المناطق الزراعية المختلفة
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="callaction bg-gray">
-                            <div class="row">
+                            <div class="row" dir="RTL">
                                 <div class="col-md-12">
                                     <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                                         <h3 style="text-align: center;color:green;">
                                             لماذا تختار جرين جولد في مشروعاتك واعمالك الزراعية ؟
                                         </h3>
-                                        <ul class="list-group">
-                                            <ol style="text-align: center; font-size: 17px;">
+                                        <ol style="list-style-type: disc;">
+                                            <li style="text-align: right; font-size: 17px;">
                                                 لأننا متخصصون فى تغذية النباتات والحماية من الأمراض من خلال سجل حافل من
                                                 النجاحات المستمره منذ عام 2005 ، بدعم السوق المصرية والعربية والافريقية
                                                 بالخدمات الموثوقة والمنتجات المميزة
-                                            </ol>
-                                            <ol style="text-align: center; font-size: 17px;">
+                                            </li>
+                                            <br>
+                                            <li style="text-align: right; font-size: 17px;">
                                                 الشركة رائده فى السوق المصرية بتخصصها فى خدمه مزارعى نظم الزراعة العضوية
                                                 و الجلوبال جاب بشكل خاص والسوق الزراعية بشكل عام بتقديم توليفة من
                                                 المدخلات الزراعية المتميزة والمتوافقة مع متطلبات المجلس التصديري
@@ -150,9 +146,38 @@
                                                 اسمدة ومخصبات وكيماويات ومبيدات زراعية اساسية ومتخصصة بشقيها الكميائي
                                                 والعضوي لدعم عملاؤنا مصدري الحاصلات الزراعية ونحرص على إنتقاء الشركاء
                                                 المتخصصين فى هذا المجال لضمان جوده المنتجات والتى تفي بهذه الاغراض
-                                            </ol>
-
-                                        </ul>
+                                            </li>
+                                            <br>
+                                            <li style="text-align: right; font-size: 17px;">
+                                                تقديم الدعم الفنى عن طريق انتشار فروعنا ومهندسينا بكافة المناطق الزراعية
+                                                وعقد الندوات وورش العمل والأيام الحقلية بالتعاون مع كبرى الشركات
+                                                العالمية فى المناطق الزراعية المختلفة
+                                            </li>
+                                            <br>
+                                            <li style="text-align: right; font-size: 17px;">
+                                                جرين جولد تعمل في كل من مصر والخارج بفريق من المهندسين الزراعيين
+                                                المتخصصين الذين يعملون جنبا إلى جنب مع التجار والموزعين لتنفيذ المبادئ
+                                                التوجيهية التقنية، تلك التي تعتمد على ظروف التربة والطقس في المنطقة
+                                            </li>
+                                            <br>
+                                            <li style="text-align: right; font-size: 17px;">
+                                                توفر شركة جرين جولد التدريب والتحديث في مختلف جوانب التغذية والحماية
+                                                للمحاصيل وعلى الاستخدام الصحيح للمنتجات. كما تنظم اجتماعات محددة ودورات
+                                                تنشيطية للفنيين والموزعين والمزارعين
+                                            </li>
+                                            <br>
+                                            <li style="text-align: right; font-size: 17px;">
+                                                يستند التعاون والحوار مع العملاء على الثقة المتبادلة ويمثل ذلك تحديا
+                                                للابتكار لدينا
+                                            </li>
+                                            <br>
+                                            <li style="text-align: right; font-size: 17px;">
+                                                فلسفتنا هي المساعدة وتقديم المشورة، ولكن أيضا مع الاستماع وتبادل الآراء
+                                                للوصول إلى زراعة محاصيل صحية باستخدام القليل من الأسمدة والمبيدات وتوفير
+                                                المال للمزارعين
+                                            </li>
+                                            <br>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
@@ -353,14 +378,23 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="filters-container" class="cbp-l-filters-alignLeft">
+<<<<<<< HEAD
                             <div data-filter="*" class="cbp-filter-item-active  cbp-filter-item">كل المنتجات
                                 ({{ count($data['Product']) }})
+=======
+                            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">كل المنتجات
+                                ({{ count($data['Product'])+1 }})
+>>>>>>> f2e3cf57708fe38b1cc2589160fbdc3023ca1e5f
                             </div>
                             @foreach($data['Category'] as $cat)
                                  @if($cat->id==5)
                                
                                     <div data-filter=".{{$cat->id}}"
+<<<<<<< HEAD
                                          class="cbp-filter-item">{{$cat->category_name}}
+=======
+                                         class=" cbp-filter-item">{{$cat->category_name}}
+>>>>>>> f2e3cf57708fe38b1cc2589160fbdc3023ca1e5f
                                         (
                                         <div class="cbp-filter-counter"></div>
                                         )
@@ -387,7 +421,7 @@
                                                class="cbp-caption cbp-singlePage">
                                                 <div class="cbp-caption-defaultWrap">
                                                     <img
-                                                        src="{{asset('public/uploads/Products_Images/'.$product->product_img)}}"
+                                                        src="{{$product->product_img}}"
                                                         alt="" width="100%">
                                                 </div>
                                                 <div class="cbp-caption-activeWrap">
@@ -416,94 +450,94 @@
         </section>
         <!-- /Section: team -->
         <!-- Section: works -->
-        <section id="facilities" class="home-section paddingbot-60">
-            <div class="container marginbot-50">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="wow fadeInDown" data-wow-delay="0.1s">
-                            <div class="section-heading text-center">
-                                <h2 class="h-bold" style="color:green;">خدماتنا</h2>
-                                <p>تتنوع خدمات شركة جرين جولد في المجال الزراعي وخدمة المشروعات الزراعية بتوفير الخدمات
-                                    التالي</p>
-                            </div>
-                        </div>
-                        <div class="divider-short"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
+    {{--        <section id="facilities" class="home-section paddingbot-60">--}}
+    {{--            <div class="container marginbot-50">--}}
+    {{--                <div class="row">--}}
+    {{--                    <div class="col-lg-8 col-lg-offset-2">--}}
+    {{--                        <div class="wow fadeInDown" data-wow-delay="0.1s">--}}
+    {{--                            <div class="section-heading text-center">--}}
+    {{--                                <h2 class="h-bold" style="color:green;">خدماتنا</h2>--}}
+    {{--                                <p>تتنوع خدمات شركة جرين جولد في المجال الزراعي وخدمة المشروعات الزراعية بتوفير الخدمات--}}
+    {{--                                    التالي</p>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                        <div class="divider-short"></div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--            <div class="container">--}}
+    {{--                <div class="row">--}}
 
-                    <div class="col-sm-3 col-md-3">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="box text-center">
-                                <img src="{{ asset('public/img/icon/services/1.png')}}" width="60" height="60"/>
-                                <br><br>
-                                <h4 class="h-bold" style="color:green;">تطبيقات التليفون المحمول</h4>
-                                <p>
-                                    أول شركة زراعية مصرية تقدم تطبيق خاص بخدمات الشركة المختلفة لكافة العملاء في مصر
-                                    والشرق الأوسط وأفريقيا على متجر جوجل بلاي لنكون الأقرب اليكم</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-md-3">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="box text-center">
-                                <img src="{{ asset('public/img/icon/services/2.png')}}" width="60" height="60"/>
-                                <br><br>
-                                <h4 class="h-bold" style="color:green;"> الكيماويات الزراعية</h4>
-                                <p>
-                                    الجديد في الكيماويات الزراعية ومعالجات الملوحة ومحسنات التربة والعمل على تطويرها
-                                    بأحدث اساليب طرق الادارة الحديثة والمتقدمة </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-md-3">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="box text-center">
-                                <img src="{{ asset('public/img/icon/services/3.png')}}" width="60" height="60"/>
-                                <br><br>
-                                <h4 class="h-bold" style="color:green;">الاسمدة والمخصبات </h4>
-                                <p>
-                                    لدينا كل ما هو جديد في مجال الاسمدة الكيماوية والمركبات العضوية والفولفات والهيومات
-                                    ومستخلصات لطحالب البحرية والاحماض الامينية</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-md-3">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="box text-center">
+    {{--                    <div class="col-sm-3 col-md-3">--}}
+    {{--                        <div class="wow fadeInUp" data-wow-delay="0.2s">--}}
+    {{--                            <div class="box text-center">--}}
+    {{--                                <img src="{{ asset('public/img/icon/services/1.png')}}" width="60" height="60"/>--}}
+    {{--                                <br><br>--}}
+    {{--                                <h4 class="h-bold" style="color:green;">تطبيقات التليفون المحمول</h4>--}}
+    {{--                                <p>--}}
+    {{--                                    أول شركة زراعية مصرية تقدم تطبيق خاص بخدمات الشركة المختلفة لكافة العملاء في مصر--}}
+    {{--                                    والشرق الأوسط وأفريقيا على متجر جوجل بلاي لنكون الأقرب اليكم</p>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="col-sm-3 col-md-3">--}}
+    {{--                        <div class="wow fadeInUp" data-wow-delay="0.2s">--}}
+    {{--                            <div class="box text-center">--}}
+    {{--                                <img src="{{ asset('public/img/icon/services/2.png')}}" width="60" height="60"/>--}}
+    {{--                                <br><br>--}}
+    {{--                                <h4 class="h-bold" style="color:green;"> الكيماويات الزراعية</h4>--}}
+    {{--                                <p>--}}
+    {{--                                    الجديد في الكيماويات الزراعية ومعالجات الملوحة ومحسنات التربة والعمل على تطويرها--}}
+    {{--                                    بأحدث اساليب طرق الادارة الحديثة والمتقدمة </p>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="col-sm-3 col-md-3">--}}
+    {{--                        <div class="wow fadeInUp" data-wow-delay="0.2s">--}}
+    {{--                            <div class="box text-center">--}}
+    {{--                                <img src="{{ asset('public/img/icon/services/3.png')}}" width="60" height="60"/>--}}
+    {{--                                <br><br>--}}
+    {{--                                <h4 class="h-bold" style="color:green;">الاسمدة والمخصبات </h4>--}}
+    {{--                                <p>--}}
+    {{--                                    لدينا كل ما هو جديد في مجال الاسمدة الكيماوية والمركبات العضوية والفولفات والهيومات--}}
+    {{--                                    ومستخلصات لطحالب البحرية والاحماض الامينية</div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <div class="col-sm-3 col-md-3">--}}
+    {{--                        <div class="wow fadeInUp" data-wow-delay="0.2s">--}}
+    {{--                            <div class="box text-center">--}}
 
-                                <img src="{{ asset('public/img/icon/services/4.png')}}" width="60" height="60"/>
-                                <br><br>
+    {{--                                <img src="{{ asset('public/img/icon/services/4.png')}}" width="60" height="60"/>--}}
+    {{--                                <br><br>--}}
 
-                                <h4 class="h-bold" style="color:green;">بدائل المبيدات الزراعية</h4>
-                                <p>
-                                    تقديم خدمات بدائل المبيدات الزراعية الحيوية والعضوية والكيميائية التي تحتاج اليها
-                                    الاراضي الزراعية التي تتميز بالجودة والفعالية
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <br><br>
-                    <div class="col-sm-3 col-md-3">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="box text-center">
-                                <img src="{{ asset('public/img/icon/services/5.png')}}" width="60" height="60"/>
-                                <br><br>
-                                <h4 class="h-bold" style="color:green;">نظم الزراعة الحديثة</h4>
-                                <p>
-                                    لدينا كل ما هو جديد في انظمة الزراعات المحورية والزراعات المحمية والانفاق وكذلك
-                                    انظمة الزراعة بدون تربة (هيدروبونيك والايربونيك)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    {{--                                <h4 class="h-bold" style="color:green;">بدائل المبيدات الزراعية</h4>--}}
+    {{--                                <p>--}}
+    {{--                                    تقديم خدمات بدائل المبيدات الزراعية الحيوية والعضوية والكيميائية التي تحتاج اليها--}}
+    {{--                                    الاراضي الزراعية التي تتميز بالجودة والفعالية--}}
+    {{--                                </p>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                    <br><br>--}}
+    {{--                    <div class="col-sm-3 col-md-3">--}}
+    {{--                        <div class="wow fadeInUp" data-wow-delay="0.2s">--}}
+    {{--                            <div class="box text-center">--}}
+    {{--                                <img src="{{ asset('public/img/icon/services/5.png')}}" width="60" height="60"/>--}}
+    {{--                                <br><br>--}}
+    {{--                                <h4 class="h-bold" style="color:green;">نظم الزراعة الحديثة</h4>--}}
+    {{--                                <p>--}}
+    {{--                                    لدينا كل ما هو جديد في انظمة الزراعات المحورية والزراعات المحمية والانفاق وكذلك--}}
+    {{--                                    انظمة الزراعة بدون تربة (هيدروبونيك والايربونيك)--}}
+    {{--                                </p>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
 
-            </div>
-        </section>
+    {{--            </div>--}}
+    {{--        </section>--}}
 
-        <!-- /Section: works -->
+    <!-- /Section: works -->
 
         <!-- Section: testimonial -->
 
@@ -670,7 +704,8 @@
                         <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                             <div class="section-heading text-center">
                                 <h2 class="h-bold" style="color:green;">Our partner</h2>
-                                <p>Take charge of your health today with our specially designed health packages</p>
+                                <p>متخصصون فى تغذية النباتات والحماية من الأمراض</p>
+                                <p>WE ARE SPECIALIST IN PLANT NUTRITION & PLANT PROTECTION</p>
                             </div>
                         </div>
                         <div class="divider-short"></div>
@@ -682,71 +717,21 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-3">
                         <div class="partner">
-                            <a href="#"><img src="{{ asset('public/img/dummy/partner-1.jpg')}}" alt=""/></a>
+                            <a href="#"><img src="{{ asset('public/img/dummy/partner-1.png')}}" class="img-responsive"
+                                             alt=""/></a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="partner">
-                            <a href="#"><img src="{{ asset('public/img/dummy/partner-2.jpg')}}" alt=""/></a>
+                            <a href="#"><img src="{{ asset('public/img/dummy/partner-2.png')}}" class="img-responsive"
+                                             alt=""/></a>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="partner">
-                            <a href="#"><img src="{{ asset('public/img/dummy/partner-3.jpg')}}" alt=""/></a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="partner">
-                            <a href="#"><img src="{{ asset('public/img/dummy/partner-4.jpg')}}" alt=""/></a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
 
-
-        <!-- Section: activities -->
-    {{--        <section id="activities" class="home-section nopadding paddingtop-60">--}}
-
-    {{--            <div class="container">--}}
-    {{--                <div class="row">--}}
-    {{--                    <div class="col-md-12">--}}
-    {{--                        <div class="callaction bg">--}}
-    {{--                            <div class="row">--}}
-    {{--                                <div class="col-md-12">--}}
-    {{--                                    <div class="wow fadeInUp" data-wow-delay="0.2s" style="text-align: center;">--}}
-    {{--                                        <h3 style="color:green;">نشاط الشركة</h3>--}}
-    {{--                                        <p>--}}
-    {{--                                            جرين جولد للتوكيلات التجارية والزراعية تعمل لأكثر من خمسة عشرة عاماً من--}}
-    {{--                                            الأبحاث والتطوير تميزت الشركة فى المركبات السمادية السائلة والمخصبات كذلك--}}
-    {{--                                            الأسمدة البودرة والمدعم بالعناصر الصغرى والهيوميك والفالفيك أسيد والأسمدة--}}
-    {{--                                            العضوية ومنظمات النمو النباتية. منذ عام 2005، يتم تطوير هذه المستحضرات--}}
-    {{--                                            باستخدام أحدث التقنيات لاستخلاص البروتينات النباتية، والإنزيمات الطبيعية--}}
-    {{--                                            والأحماض العضوية المعقدة والكربوهيدرات والفيتامينات والهرمونات والعناصر--}}
-    {{--                                            الغذائية والطحالب البحرية والاحماض الأمينية ومنظمات النمو الطبيعية--}}
-    {{--                                            والأكسينات والسيتوكينينات والاندولات. يتم استخدام صور مختلفة من هذه المكونات--}}
-    {{--                                            في صياغة أكثر من 50 منتج مختلف، وخاصة المنتجات العضوية الجديدة المصممة--}}
-    {{--                                            لحماية المحاصيل من الأمراض وزيادة الإنتاج. جرين جولد تعمل في كل من مصر--}}
-    {{--                                            والخارج بفريق من المهندسين الزراعيين المتخصصين الذين يعملون جنبا إلى جنب مع--}}
-    {{--                                            التجار والموزعين لتنفيذ المبادئ التوجيهية التقنية، تلك التي تعتمد على ظروف--}}
-    {{--                                            التربة والطقس في المنطقة. كذلك توفر شركة جرين جولد التدريب والتحديث في مختلف--}}
-    {{--                                            جوانب التغذية والحماية للمحاصيل وعلى الاستخدام الصحيح للمنتجات. كما تنظم--}}
-    {{--                                            اجتماعات محددة ودورات تنشيطية للفنيين والموزعين والمزارعين. ويستند التعاون--}}
-    {{--                                            والحوار مع العملاء على الثقة المتبادلة ويمثل ذلك تحديا للابتكار لدينا.--}}
-    {{--                                            فلسفتنا هي المساعدة وتقديم المشورة، ولكن أيضا مع الاستماع وتبادل الآراء--}}
-    {{--                                            للوصول إلى زراعة محاصيل صحية باستخدام القليل من الأسمدة والمبيدات وتوفير--}}
-    {{--                                            المال للمزارعين--}}
-    {{--                                        </p>--}}
-    {{--                                    </div>--}}
-
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </section>--}}
-    <!-- /Section: activities -->
 
         <footer>
             <div class="container">
