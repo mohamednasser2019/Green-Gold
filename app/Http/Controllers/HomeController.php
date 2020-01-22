@@ -36,4 +36,9 @@ class HomeController extends Controller
 
         return view('Medico', compact('data'));
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2ef86f5baf3d5af9f6a7cf7abd470005acb7cfe9
 }
