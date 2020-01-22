@@ -49,72 +49,141 @@
             </div>
             <!-- /.container -->
         </nav>
+
+
+
+
+      
         <section id="slider" data-stellar-background-ratio="0.5" class="home-section paddingbot-60 parallax">
-            <div class="carousel-reviews broun-block">
-                <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="{{ asset('public/img/slider/00.png')}}"
-                                 class="img-responsive">
 
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('public/img/slider/01.png')}}"
-                                 class="img-responsive">
+       
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
 
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('public/img/slider/02.png')}}"
-                                 class="img-responsive">
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
 
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('public/img/slider/03.png')}}"
-                            >
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
 
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('public/img/slider/04.png')}}"
-                                 class="img-responsive">
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('public/img/slider/05.png')}}"
-                                 class="img-responsive">
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('public/img/slider/06.png')}}"
-                            >
+.active {
+  background-color: #717171;
+}
 
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('public/img/slider/07.png')}}"
-                                 class="img-responsive">
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('public/img/slider/08.png')}}"
-                                 class="img-responsive">
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
-                        </div>
-                    </div>
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
-                    <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
 
-                </div>
+<div class="slideshow-container">
 
-            </div>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="{{asset('public\img\slider\00.png')}}" alt="Image" height="350" width="1000">
+  <div class="text">نيموزان</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="{{asset('public\img\slider\01.png')}}" alt="Image" height="350" width="1000">
+  <div class="text">ووتر سيف</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="{{asset('public\img\slider\02.png')}}" alt="Image" height="350" width="1000">
+  <div class="text">كاليومين بلس</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 4 seconds
+}
+</script>
+
+
+
+
         </section>
 
         <!-- /Section: intro -->
@@ -378,23 +447,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="filters-container" class="cbp-l-filters-alignLeft">
-<<<<<<< HEAD
-                            <div data-filter="*" class="cbp-filter-item-active  cbp-filter-item">كل المنتجات
-                                ({{ count($data['Product']) }})
-=======
                             <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">كل المنتجات
                                 ({{ count($data['Product'])+1 }})
->>>>>>> f2e3cf57708fe38b1cc2589160fbdc3023ca1e5f
                             </div>
                             @foreach($data['Category'] as $cat)
                                  @if($cat->id==5)
                                
                                     <div data-filter=".{{$cat->id}}"
-<<<<<<< HEAD
-                                         class="cbp-filter-item">{{$cat->category_name}}
-=======
                                          class=" cbp-filter-item">{{$cat->category_name}}
->>>>>>> f2e3cf57708fe38b1cc2589160fbdc3023ca1e5f
                                         (
                                         <div class="cbp-filter-counter"></div>
                                         )
