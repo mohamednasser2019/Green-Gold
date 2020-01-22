@@ -25,19 +25,15 @@ class HomeController extends Controller
 
     public function index()
     {
-        $Product = Product::orderBy('created_at', 'desc')->get();
+        $Product = Product::where('Status','active')->orderBy('created_at', 'desc')->get();
+
         $Category = DB::table('categories')
             ->orderBy('sorting', 'asc')
             ->get();
+
         $data['Product'] = $Product;
         $data['Category'] = $Category;
 
         return view('Medico', compact('data'));
     }
-
-
-    // public function readMore($id, $title)
-    // {
-    //   dd($id , $title);
-    // }
 }

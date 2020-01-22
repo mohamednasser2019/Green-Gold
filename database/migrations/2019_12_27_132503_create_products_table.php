@@ -21,6 +21,8 @@ class CreateProductsTable extends Migration
             $table->text('usage_rates');
             $table->string('packaging');
             $table->text('aboutProduct');
+            $table->string('Status');
+            $table->integer('Page_order');
             $table->integer('created_by')->unsigned();
             $table->integer('category_id')->unsigned();
 

@@ -36,7 +36,11 @@ Route::group(['prefix' => 'admin'], function ()
     Route::get('products/{id}/delete', 'Admin\ProductController@destroy');
     Route::get('products/{id}/edit', 'Admin\ProductController@edit');
 
-       
+     Route::get('products/{id}/status', 'Admin\ProductController@status');
+
+    Route::resource('events', 'Admin\EventControler');
+    Route::get('events/{id}/delete', 'Admin\EventControler@destroy');
+    Route::get('events/{id}/edit', 'Admin\EventControler@edit');  
 
     
 

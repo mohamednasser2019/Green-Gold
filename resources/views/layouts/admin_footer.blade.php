@@ -2,6 +2,10 @@
 <script src="{{ asset('public/js/admin/vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('public/js/admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
+<!-- For sorting product Table-->
+<!-- <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script> -->
+
 <!-- Core plugin JavaScript-->
 <script src="{{ asset('public/js/admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 

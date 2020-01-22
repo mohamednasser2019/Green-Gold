@@ -18,6 +18,7 @@ return [
     'index_details' => 'View details',
     'index_categories' => 'Categories',
     'index_products' => 'Products',
+    'index_events' => 'Events',
     'index_users' => 'Users',
 
     'created_at' => 'Created at',
@@ -33,8 +34,24 @@ return [
     'tbl_product_name' => 'Product Name',
     'tbl_product_cat' => 'Category',
     'tbl_product_img' => 'Product image',
+    'tbl_product_active' => 'Status',
+    'tbl_product_sort' => 'Sorting',
     'products_create' => 'Add new product',
+    'index_products_edit' => 'Edit your Product',
     'products_pnl_header' => 'All product data',
+
+    'tbl_event' => 'Events/Reports',
+    'tbl_event_Id' => '#',
+    'tbl_event_type' => 'type',
+    'tbl_event_Image' => 'event Image',
+    'tbl_event_title' => 'Title',
+    'tbl_event_desc' => 'description',
+    'tbl_event_link' => 'Link',
+    'events_create' => 'Add new Event',
+    'event_edit' => 'Edit your Event',
+    'event_pnl_header' => 'All Events data',
+
+
 
     'tbl_users_FullName' => 'Full Name',
     'tbl_users_Email' => 'Email',
@@ -54,7 +71,7 @@ return [
     'actions' => 'Actions',
     'create_product_cat_hint' => 'Please Choose category',
     'index_categories_edit' => 'Please Edit your  category',
-    'index_products_edit' => 'Edit your Product',
+    
     'index_users_data' => 'All users data',
     'index_users_edit' => 'Edit users data',
 

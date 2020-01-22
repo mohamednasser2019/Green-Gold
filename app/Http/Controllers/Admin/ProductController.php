@@ -32,7 +32,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = $this->objectName::with('getCategory')->get();
+        $data = $this->objectName::with('getCategory')->orderBy('created_at', 'desc')->get();
+
         // dd($data);
         return view($this->folderView.'index',compact('data'));
 
@@ -175,13 +176,31 @@ class ProductController extends Controller
 
 
     }
+   public function status(Request $request, $id)
+    {
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+        $input = $request->all();
+      if($request['Status'] != 'active')
+        {
+          
+            $input = $request->all();
+            $input['Status'] ='inactive';
+
+        }else  if($request['Status'] != 'inactive')
+        {
+             $input = $request->all();
+            $input['Status'] ='active';
+        }
+
+
+
+        $this->objectName::find($id)->update($input);
+
+
+       return redirect()->route('products.index')->with('success',' status has been updated');
+
+
+    }
     public function destroy($id)
     {
         $chcek = $this->objectName::findOrFail($id);
@@ -189,7 +208,7 @@ class ProductController extends Controller
         {
             $this->objectName::find($id)->delete();
 
-            return redirect()->back()->with('success', $this->flash);
+            return redirect()->back()->with('success', $this->flash.'Deleted');
         }
         else
         {

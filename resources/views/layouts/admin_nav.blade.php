@@ -61,7 +61,11 @@
                 <i class="    fas fa-fw fa-user" style="font-size: 16px;"></i>
                 <span style="font-size: 18px;">{{trans('arabic_trans.index_products')}}</span></a>
         </li>
-
+        <li class="nav-item">
+            <a class="nav-link" href="{{ URL::to('admin/events') }}">
+                <i class="fas fa-fw fa-user" style="font-size: 16px;"></i>
+                <span style="font-size: 18px;">{{trans('arabic_trans.tbl_event')}}</span></a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ URL::to('admin/users') }}">
                 <i class="fas fa-fw fa-user" style="font-size: 16px;"></i>
