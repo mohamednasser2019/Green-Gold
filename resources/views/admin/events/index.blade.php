@@ -27,7 +27,7 @@
                     <thead>
                     <tr>
                         <th>{{trans('arabic_trans.tbl_event_Id')}}</th>
-                        <th>{{trans('arabic_trans.tbl_event_type')}}</th>
+                <!--         <th>{{trans('arabic_trans.tbl_event_type')}}</th> -->
                         <th>{{trans('arabic_trans.tbl_event_Image')}}</th>
                         <th>{{trans('arabic_trans.tbl_event_title')}}</th>
                         <th>{{trans('arabic_trans.tbl_event_desc')}}</th>
@@ -38,7 +38,7 @@
                     <tfoot>
                     <tr>
                         <th>{{trans('arabic_trans.tbl_event_Id')}}</th>
-                        <th>{{trans('arabic_trans.tbl_event_type')}}</th>
+                   <!--      <th>{{trans('arabic_trans.tbl_event_type')}}</th> -->
                         <th>{{trans('arabic_trans.tbl_event_Image')}}</th>
                         <th>{{trans('arabic_trans.tbl_event_title')}}</th>
                         <th>{{trans('arabic_trans.tbl_event_desc')}}</th>
@@ -52,7 +52,7 @@
                         <tr>
                             <td><?php echo $i; ?></td>
                             <?php $i++; ?>
-                            <td>{{ $row->type }}</td>
+                       <!--      <td>{{ $row->type }}</td> -->
                             <td><img width="100px" height="80px"
                                      src="{{ $row->event_img }}"></td>
                             <td>{{ $row->event_title }}</td>

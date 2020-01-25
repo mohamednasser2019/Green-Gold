@@ -40,7 +40,8 @@ return [
     'index_products_edit' => 'Edit your Product',
     'products_pnl_header' => 'All product data',
 
-    'tbl_event' => 'Events/Reports',
+    'tbl_event' => 'Events',
+    // /Reports
     'tbl_event_Id' => '#',
     'tbl_event_type' => 'type',
     'tbl_event_Image' => 'event Image',

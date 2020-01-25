@@ -52,7 +52,7 @@ class EventControler extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'type' => 'required|string',
+            // 'type' => 'required|string',
             'event_title' => 'required|string',
             'event_img' => 'required',
             'event_link' => 'required|string',
@@ -103,7 +103,7 @@ class EventControler extends Controller
     public function update(Request $request, $id)
     {
        $request->validate([
-       	'type' => 'required|string',
+       	// 'type' => 'required|string',
              'event_title' => 'required|string',
             'event_link' => 'required|string',
             'event_desc' => 'required|string'

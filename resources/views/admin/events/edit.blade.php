@@ -27,10 +27,11 @@
             <div class="row">
 
                 <div class="col-md-6">
-                      <div class="form-group">
+                    
+             <!--  <div class="form-group">
                     {!! Form::label('type', 'Data Type') !!}
                     {!! Form::select('type', ['news' => 'News', 'report' => 'Report'], $data->type, ['class'=>'form-control','placeholder' => 'Pick a Type...']) !!}
-              </div>
+              </div> -->
                     <div class="form-group">
                         <label class="control-label">
                             {{trans('arabic_trans.tbl_event_title')}}

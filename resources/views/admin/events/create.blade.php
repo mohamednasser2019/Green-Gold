@@ -24,10 +24,10 @@
             {!! Form::open(['url' => 'admin/events', 'files'=>true]) !!}
 
 
-            <div class="form-group">
+         <!--    <div class="form-group">
                     {!! Form::label('type', 'Event Type') !!}
                     {!! Form::select('type', ['news' => 'News', 'report' => 'Report'], null, ['class'=>'form-control','placeholder' => 'Pick a Type...']) !!}
-            </div>
+            </div> -->
 
 
             <div class="form-group">
